@@ -1,0 +1,15 @@
+.nav-link:hover {
+    color: #d3d3d3;
+}
+
+.contact-submit-btn {
+    font-family: AvenirNextDemi;
+    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 40px;
+}
+
+.contact-submit-btn:hover {
+    background-color: #C79054;
+}
+

@@ -48,3 +48,8 @@ a {
 .uppercase {
     text-transform: uppercase;
 }
+
+ul li {
+    position: relative;
+    left: -20px;
+}

@@ -32,6 +32,10 @@
     color: #a37645;
 }
 
+.gold5-fg {
+    color: #e9d9c8;
+}
+
 .gold2-bg {
     background-color: #a37645;
 }
@@ -40,10 +44,30 @@
     background-color: #81542e !important;
 }
 
+.gold4-bg {
+    background-color: #C79054 !important;
+}
+
 .gray1-fg {
     color: #d3d3d3 !important;
 }
 
 .gray2-fg {
     color: #595959 !important;
+}
+
+.gray1-bg {
+    background-color: #e3e3e3 !important;
+}
+
+.gray2-bg {
+    background-color: #ebebeb !important;
+}
+
+.gray3-bg {
+    background-color: #f1f1f1 !important;
+}
+
+.gray4-bg {
+    background-color: #f9f9f9 !important;
 }
