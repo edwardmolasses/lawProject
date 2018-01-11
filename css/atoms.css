@@ -1,3 +1,19 @@
+.posa {
+    position: absolute;
+}
+
+.posr {
+    position: relative;
+}
+
+.pt15 {
+   padding-top: 15px;
+}
+
+.pb15 {
+   padding-bottom: 15px;
+}
+
 .flip-xy {
     -moz-transform: scale(-1, -1);
     -o-transform: scale(-1, -1);

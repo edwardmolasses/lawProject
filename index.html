@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/animation.css">
         <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/banners.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body ng-app="likewiseApp" style="max-width: 1400px; margin: 0 auto;">
@@ -20,7 +21,6 @@
                     Phone: 604.559.6201
                 </div>
                 <button class="md-fab md-mini md-button md-ink-ripple gold3-bg" type="button" style="position: relative; top: 20px; margin-right: 40px;">
-                    <!--<md-icon md-svg-src="images/caret.png"></md-icon>-->
                     <div class="md-ripple-container" style="text-transform: lowercase">in</div>
                 </button>
             </div>
@@ -37,24 +37,25 @@
                         <h2>Franchise & Business Law</h2>
                     </div>
                 </div>
-                <div flex="100" layout="row" layout-align="space-around end">
+                <div flex="100" layout="row" layout-align="center end">
                     <div>
                         <img class="translatey-6" src="images/owl1.png"/>
                     </div>
+                    <div style="width:2%"></div>
                     <div>
                         <img class="translatey-6" src="images/owl2.png"/>
                     </div>
-                    <div style="position: relative;">
+                    <div style="width:2%"></div>
+                    <div class="posr">
                         <img class="translatey-6" src="images/owl1.png"/>
-                        <div class="blink" style="position: absolute; top: 155px; left: 224px;">
+                        <div class="blink posa" style="top: 69px; left: 198px;">
                             <img src="images/owl-blink.png"/>
                         </div>
                     </div>
                 </div>
-                <div class="red" flex="100 lightgreen" layout="row" layout-align="center end">
+                <div flex="100 lightgreen" layout="row" layout-align="center end">
                     <a href="#introduction">
-                        <button class="md-fab md-button md-ink-ripple gold3-bg" type="button" style="position: relative; top: 33px;">
-                            <!--<md-icon md-svg-src="images/caret.png"></md-icon>-->
+                        <button class="introduction-scroll-btn md-fab md-button md-ink-ripple gold3-bg posr" type="button" style="top: 33px;">
                             <div class="md-ripple-container" style="">
                                 <i class="white-fg material-icons" style="position: relative; top: 9px;">keyboard_arrow_down</i>
                             </div>
@@ -94,29 +95,29 @@
                     <div style="padding-left: 40px;">
                         <img src="images/owls-logo.png"/>
                     </div>
-                    <div flex="70" layout="row" layout-align="space-between" style="padding-right: 40px;">
+                    <div flex="70" layout="row" layout-align="space-between center" style="padding-right: 40px;">
                         <div>
-                            <a class="nav-link white-fg text-decoration-none" href="#likewise">Likewise*</a>
+                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none" href="#cv">John L. Rogers</a>
+                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#cv">John L. Rogers</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none" href="#services">Services</a>
+                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#services">Services</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none" href="#testimonials">Testimonials</a>
+                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#testimonials">Testimonials</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none" href="#publications">Publications</a>
+                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#publications">Publications</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none" href="#upfront">Up Front Fees</a>
+                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#upfront">Up Front Fees</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none" href="#contact">Contact</a>
+                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
                         </div>
-                        <button class="md-fab md-mini md-button md-ink-ripple gold3-bg" type="button" style="position: relative;top: -17px;">
+                        <button class="md-fab md-mini md-button md-ink-ripple gold3-bg posr" type="button">
                             <!--<md-icon md-svg-src="images/caret.png"></md-icon>-->
                             <div class="md-ripple-container" style="text-transform: lowercase">in</div>
                         </button>
@@ -156,7 +157,7 @@
             <!-- ******************************************** -->
             <!--                CV CONTENT                    -->
             <!-- ******************************************** -->
-            <div class="black2-fg white-bg" flex layout="row" layout-align="center start" style="padding-bottom: 100px; background-image: url('images/beans.png'); background-repeat: no-repeat; background-position: 100% 150%;">
+            <div class="cv-listing black2-fg white-bg" flex layout="row" layout-align="center start" style="padding-bottom: 100px;">
                 <div flex="20" layout="column" layout-align="center stretch">
                     <div>
                         <h3>Practice Areas</h3>
@@ -240,7 +241,7 @@
             <!--            FRANCHISING & LEGAL               -->
             <!-- ******************************************** -->
             <div id="services" class="white-fg" flex layout="row">
-                <div flex="100" layout="row" layout-align="center start" style="height: 774px; background-image: url('images/cups.png'); background-repeat: no-repeat;">
+                <div class="services-banner" flex="100" layout="row" layout-align="center start" style="height: 774px;">
                     <div class="font-size-40" style="padding-top: 160px;">Franchising & Legal Services</div>
                 </div>
             </div>
@@ -373,9 +374,9 @@
             <!-- ******************************************** -->
             <!--                GENERAL LEGAL                 -->
             <!-- ******************************************** -->
-            <div class="white-bg" flex layout="row" layout-align="center" style="position: relative;">
+            <div class="white-bg posr" flex layout="row" layout-align="center">
                 <div class="buffer gray1-fg" flex="70" layout="row"></div>
-                <div style="position: absolute; top: -50px; right: 350px;">
+                <div style="position: absolute; top: -50px; right: 23%;">
                     <img src="images/sign-here.png" />
                 </div>
             </div>
@@ -385,7 +386,6 @@
                         <h2>General Legal Services</h2>
                         <p><strong>Not franchising?</strong> That’s ok, we also provide general commercial services including:</p>
                     </div>
-                    <!--<div flex></div>-->
                 </div>
                 <div flex layout="row" flex-offset="15">
                     <div flex="25">
@@ -487,7 +487,7 @@
             <!--              UPFRONT PRICING                 -->
             <!-- ******************************************** -->
             <div id="upfront" class="gold2-fg" flex layout="row">
-                <div flex="100" layout="row" layout-align="center start" style="height: 758px; background-image: url('images/upfront.png'); background-repeat: no-repeat;">
+                <div class="upfront-banner" flex="100" layout="row" layout-align="center start" style="height: 758px;">
                     <div class="font-size-40" style="padding-top: 120px;">Up Front Pricing</div>
                 </div>
             </div>
@@ -536,7 +536,7 @@
             <!--                    MAP                       -->
             <!-- ******************************************** -->
             <div class="gold2-fg" flex layout="row">
-                <div flex="100" layout="row" layout-align="center start" style="height: 430px; background-image: url('images/map.png'); background-repeat: no-repeat;">
+                <div class="map-banner" flex="100" layout="row" layout-align="center start" style="height: 430px;">
                 </div>
             </div>
 

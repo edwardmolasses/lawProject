@@ -1,0 +1,17 @@
+.services-banner {
+    background: url('../images/cups.png') no-repeat center;
+}
+
+.upfront-banner {
+    background: url('../images/upfront.png') no-repeat center;
+}
+
+.map-banner {
+    background: url('../images/map.png') no-repeat center;
+}
+
+.cv-listing {
+    background-image: url('../images/beans.png');
+    background-repeat: no-repeat;
+    background-position: 100% 108%;
+}

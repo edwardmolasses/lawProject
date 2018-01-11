@@ -1,9 +1,9 @@
 .blink {
-    -webkit-animation: 4s linear infinite condemned_blink_effect; // for android
-    animation: 4s linear infinite condemned_blink_effect;
+    -webkit-animation: 4s linear infinite condemned_blink_effect;
+            animation: 4s linear infinite condemned_blink_effect;
 }
 
-@-webkit-keyframes condemned_blink_effect { // for android
+@-webkit-keyframes condemned_blink_effect {
     0% {
         visibility: hidden;
     }
