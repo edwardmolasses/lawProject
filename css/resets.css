@@ -1,0 +1,32 @@
+body {
+    font-family: AvenirNextRegular;
+}
+
+a {
+    color: #856238;;
+    text-decoration: none;
+}
+
+a:active,
+a:focus,
+input:active,
+input:focus,
+button:active,
+button:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none
+}
+
+ul li {
+    position: relative;
+    left: -20px;
+}
+
+.md-input {
+    border: none !important;
+}
+
+md-input-container label {
+    font-size: 20px;
+}

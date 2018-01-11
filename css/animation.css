@@ -35,19 +35,40 @@
 }
 
 @keyframes shake {
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
+    0%, 20%, 100% {
+        transform: translate3d(1px, 0, 0);
     }
 
-    20%, 80% {
-        transform: translate3d(2px, 0, 0);
+    40% {
+        transform: translate3d(-2px, 0, 0);
     }
 
-    30%, 50%, 70% {
+    60% {
+        transform: translate3d(3px, 0, 0);
+    }
+
+    80% {
         transform: translate3d(-3px, 0, 0);
     }
+}
 
-    40%, 60% {
-        transform: translate3d(3px, 0, 0);
+.bounce:hover {
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+
+    80% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
     }
 }

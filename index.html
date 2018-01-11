@@ -9,9 +9,11 @@
         <link rel="stylesheet" href="css/animation.css">
         <link rel="stylesheet" href="css/buttons.css">
         <link rel="stylesheet" href="css/banners.css">
+        <link rel="stylesheet" href="css/forms.css">
+        <link rel="stylesheet" href="css/resets.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
-    <body ng-app="likewiseApp" style="max-width: 1400px; margin: 0 auto;">
+    <body ng-app="likewiseApp" style="max-width: 1400px; margin: 0 auto;" ng-controller="DemoCtrl" ng-cloak="" ng-app="MyApp">
         <div>
             <!-- ******************************************** -->
             <!--                CONTACT                       -->
@@ -78,11 +80,9 @@
                         </div>
                     </div>
                     <div flex="100" layout="row" layout-align="center">
-                        <div>
-                            <a href="#nav" style="padding: 20px;">
-                                <i class="white-fg material-icons">keyboard_arrow_down</i>
-                            </a>
-                        </div>
+                        <a href="#nav" class="bounce" style="padding: 20px;">
+                            <i class="white-fg material-icons">keyboard_arrow_down</i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -405,7 +405,7 @@
                 </div>
             </div>
             <div flex="100" layout="row" layout-align="center center" class="white-bg" style="padding: 50px 0;">
-                <a href="#testimonials" style="padding: 20px;">
+                <a href="#testimonials" class="bounce" style="padding: 20px;">
                     <i class="gold2-fg material-icons">keyboard_arrow_down</i>
                 </a>
             </div>
@@ -492,7 +492,7 @@
                 </div>
             </div>
             <div class="white-bg" flex layout="row" layout-align="center center" style="padding: 50px 0;">
-                <a href="#contact" style="padding: 20px;">
+                <a href="#contact" class="bounce" style="padding: 20px;">
                     <i class="gold2-fg material-icons">keyboard_arrow_down</i>
                 </a>
             </div>
@@ -508,26 +508,44 @@
                 </div>
                 <div flex="15" layout="row"></div>
             </div>
-            <div class="white-bg" flex layout="row" layout-align="center center" style="padding-bottom: 150px;">
-                <form name="userForm" flex="70">
-                    <div layout="column" style="padding-bottom: 50px;">
-                        <md-input-container class="gray1-bg">
-                            <label>Name*</label>
-                            <input ng-model="user.name">
-                        </md-input-container>
-                        <md-input-container class="gray2-bg">
-                            <label>Email*</label>
-                            <input ng-model="user.email">
-                        </md-input-container>
-                        <md-input-container class="gray3-bg">
-                            <label>Describe your needs ...</label>
-                            <input ng-model="user.email">
-                        </md-input-container>
-                    </div>
-                    <div flex layout="row" layout-align="center">
-                        <a href="#" class="contact-submit-btn gold2-bg white-fg shake-icon">
-                            Send Request <i class="material-icons" style="position:relative; top: 4px; font-size: 20px;">keyboard_arrow_right</i>
-                        </a>
+            <div class="white-bg" flex layout="row" layout-align="center center" style="padding-top: 30px; padding-bottom: 150px;">
+                <form name="userForm" action="https://formspree.io/alachkovics@gmail.com" method="post" flex="70">
+                    <div layout="column">
+                        <div flex="grow" layout="row" style="margin-bottom: 15px;" class="contact-input-container" ng-class="{ 'validation-error': !validName }">
+                            <input flex
+                                   id="name"
+                                   class="gray1-bg"
+                                   name="user_name"
+                                   type="text"
+                                   ng-model="user_name"
+                                   placeholder="Name*"
+                                   style="font-size: 18px; padding: 20px 40px; border: none;">
+                        </div>
+                        <div flex="grow" layout="row" style="margin-bottom: 15px;" class="contact-input-container" ng-class="{ 'validation-error': !validMail }">
+                            <input flex
+                                   id="mail"
+                                   name="user_mail"
+                                   class="gray2-bg"
+                                   type="email"
+                                   ng-model="user_mail"
+                                   placeholder="Email*"
+                                   style="font-size: 18px; padding: 20px 40px; border: none;">
+                        </div>
+                        <div flex="grow" layout="row">
+                            <input flex
+                                   id="msg"
+                                   name="user_message"
+                                   class="gray3-bg"
+                                   type="text"
+                                   ng-model="user_message"
+                                   placeholder="Describe your needs ..."
+                                   style="font-size: 18px; padding: 20px 40px; border: none;">
+                        </div>
+                        <div flex layout="row" layout-align="center" style="margin-top: 50px;">
+                            <button  type="submit" class="contact-submit-btn gold2-bg white-fg border1-white shake-icon" ng-click="validate($event)">
+                                Send Request <i class="material-icons posr" style="top: 4px; font-size: 20px;">keyboard_arrow_right</i>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -588,17 +606,29 @@
                 </div>
             </div>
         </div>
-
+{{user}}
         <script src="node_modules/angular/angular.min.js"></script>
         <script src="node_modules/angular-animate/angular-animate.min.js"></script>
         <script src="node_modules/angular-aria/angular-aria.min.js"></script>
         <script src="node_modules/angular-material/angular-material.min.js"></script>
         <script>
-//            angular.module('likewiseApp', ['ngMaterial'])
-//                    .run(function(){
-//
-//                    });
-            angular.module('likewiseApp',['ngMaterial']);
+            var app = angular.module('likewiseApp',['ngMaterial']);
+            app.controller('DemoCtrl', function($scope) {
+                $scope.validName = true;
+                $scope.validMail = true;
+
+                $scope.validate = function (event) {
+                    $scope.validName = !!$scope.user_name;
+                    $scope.validMail = !!$scope.user_mail;
+
+                    if ($scope.validName && $scope.validMail) {
+                        return true;
+                    } else {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                }
+            });
         </script>
     </body>
 </html>

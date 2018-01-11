@@ -8,15 +8,6 @@
     src: url("../fonts/AvenirNextRegular.otf") format("opentype");
 }
 
-body {
-    font-family: AvenirNextRegular;
-}
-
-a {
-    color: #856238;;
-    text-decoration: none;
-}
-
 .font-family-avenirnextr-demi {
     font-family: AvenirNextDemi;
 }
@@ -47,9 +38,4 @@ a {
 
 .uppercase {
     text-transform: uppercase;
-}
-
-ul li {
-    position: relative;
-    left: -20px;
 }
