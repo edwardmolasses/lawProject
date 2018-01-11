@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/resets.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
-    <body ng-app="likewiseApp" style="max-width: 1400px; margin: 0 auto;" ng-controller="DemoCtrl" ng-cloak="" ng-app="MyApp">
+    <body ng-app="likewiseApp" style="max-width: 1400px; margin: 0 auto;" ng-controller="likewiseCtrl" ng-cloak="">
         <div>
             <!-- ******************************************** -->
             <!--                CONTACT                       -->
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div flex="100 lightgreen" layout="row" layout-align="center end">
+                <div flex="100 lightgreen posr" layout="row" layout-align="center end">
                     <a href="#introduction">
                         <button class="introduction-scroll-btn md-fab md-button md-ink-ripple gold3-bg posr" type="button" style="top: 33px;">
                             <div class="md-ripple-container" style="">
@@ -63,6 +63,9 @@
                             </div>
                         </button>
                     </a>
+                    <div class="posa" style="padding: 0 25px 10px 0; right: 0;">
+                        <div class="white-fg" style="font-size: 13px;">*Denotes Law Corporation</div>
+                    </div>
                 </div>
             </div>
 
@@ -500,7 +503,7 @@
             <!-- ******************************************** -->
             <!--                  CONTACT                     -->
             <!-- ******************************************** -->
-            <div id="contact" class="white-bg black2-fg" flex layout="row" layout-align="center center">
+            <div class="white-bg black2-fg" flex layout="row" layout-align="center center">
                 <div flex="70" flex-offset="15">
                     <p>We appreciate that many clients dislike hourly rates because they want to know, up front, what their legal fees are going to be. That’s why Likewise offers the option of Up Front Pricing.</p>
                     <p>Once any major documents required of us have been determined, we will provide an up front fee quote in a client engagement letter, with a retainer required. The up front price will apply to all work specified in the engagement letter. Only if additional work is required will an hourly rate apply.  Disbursements and taxes will be extra. The engagement letter will cover all of these points.</p>
@@ -508,7 +511,7 @@
                 </div>
                 <div flex="15" layout="row"></div>
             </div>
-            <div class="white-bg" flex layout="row" layout-align="center center" style="padding-top: 30px; padding-bottom: 150px;">
+            <div id="contact" class="white-bg" flex layout="row" layout-align="center center" style="padding-top: 30px; padding-bottom: 150px;">
                 <form name="userForm" action="https://formspree.io/alachkovics@gmail.com" method="post" flex="70">
                     <div layout="column">
                         <div flex="grow" layout="row" style="margin-bottom: 15px;" class="contact-input-container" ng-class="{ 'validation-error': !validName }">
@@ -554,7 +557,12 @@
             <!--                    MAP                       -->
             <!-- ******************************************** -->
             <div class="gold2-fg" flex layout="row">
-                <div class="map-banner" flex="100" layout="row" layout-align="center start" style="height: 430px;">
+                <div class="map-banner cp"
+                     onclick="window.open('https://www.google.ca/maps/place/1125+Howe+St,+Vancouver,+BC+V6Z+2K8/@49.2788715,-123.1283545,17z/data=!3m1!4b1!4m5!3m4!1s0x548673d4f918da71:0x5cca229fc5d0c616!8m2!3d49.2788715!4d-123.1261658', '_blank')"
+                     flex="100"
+                     layout="row"
+                     layout-align="center start"
+                     style="height: 430px;">
                 </div>
             </div>
 
@@ -606,14 +614,14 @@
                 </div>
             </div>
         </div>
-{{user}}
+
         <script src="node_modules/angular/angular.min.js"></script>
         <script src="node_modules/angular-animate/angular-animate.min.js"></script>
         <script src="node_modules/angular-aria/angular-aria.min.js"></script>
         <script src="node_modules/angular-material/angular-material.min.js"></script>
         <script>
             var app = angular.module('likewiseApp',['ngMaterial']);
-            app.controller('DemoCtrl', function($scope) {
+            app.controller('likewiseCtrl', function($scope) {
                 $scope.validName = true;
                 $scope.validMail = true;
 

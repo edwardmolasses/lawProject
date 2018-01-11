@@ -28,3 +28,7 @@
 .translatey-6 {
     transform: translateY(6px);
 }
+
+.cp {
+    cursor: pointer;
+}
