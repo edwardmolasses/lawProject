@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/buttons.css">
         <link rel="stylesheet" href="css/banners.css">
         <link rel="stylesheet" href="css/forms.css">
+        <link rel="stylesheet" href="css/images.css">
         <link rel="stylesheet" href="css/resets.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
@@ -22,9 +23,13 @@
                 <div style="padding: 40px 15px;">
                     Phone: 604.559.6201
                 </div>
-                <button class="md-fab md-mini md-button md-ink-ripple gold3-bg" type="button" style="position: relative; top: 20px; margin-right: 40px;">
-                    <div class="md-ripple-container" style="text-transform: lowercase">in</div>
-                </button>
+                <a href="https://www.linkedin.com/in/johnlrogers/">
+                    <button class="circle-btn md-fab md-mini md-button md-ink-ripple gold3-bg posr"
+                            type="button"
+                            style="top: 20px; margin-right: 40px;">
+                        <div class="md-ripple-container" style="text-transform: lowercase"><strong>in</strong></div>
+                    </button>
+                </a>
             </div>
 
             <!-- ******************************************** -->
@@ -32,32 +37,24 @@
             <!-- ******************************************** -->
             <div id="banner" class="font-family-avenirnextr-regular white-fg black-bg h500" flex layout="column">
                 <div flex="100" layout="column" layout-align="start center">
-                    <div>
-                        <img src="images/banner-logo.png"/>
-                    </div>
+                    <div class="banner-logo"></div>
                     <div class="gold2-fg">
                         <h2>Franchise & Business Law</h2>
                     </div>
                 </div>
                 <div flex="100" layout="row" layout-align="center end">
-                    <div>
-                        <img class="translatey-6" src="images/owl1.png"/>
-                    </div>
-                    <div style="width:2%"></div>
-                    <div>
-                        <img class="translatey-6" src="images/owl2.png"/>
-                    </div>
-                    <div style="width:2%"></div>
-                    <div class="posr">
-                        <img class="translatey-6" src="images/owl1.png"/>
-                        <div class="blink posa" style="top: 69px; left: 198px;">
-                            <img src="images/owl-blink.png"/>
+                    <div class="banner-owl-one"></div>
+                    <div class="banner-owl-buffer-one" style="width:2%"></div>
+                    <div class="banner-owl-two"></div>
+                    <div class="banner-owl-buffer-two" style="width:2%"></div>
+                    <div class="banner-owl-three posr">
+                        <div class="banner-owl-three-blink blink posa">
                         </div>
                     </div>
                 </div>
                 <div flex="100 lightgreen posr" layout="row" layout-align="center end">
                     <a href="#introduction">
-                        <button class="introduction-scroll-btn md-fab md-button md-ink-ripple gold3-bg posr" type="button" style="top: 33px;">
+                        <button class="circle-btn md-fab md-button md-ink-ripple gold3-bg posr" type="button" style="top: 33px;">
                             <div class="md-ripple-container" style="">
                                 <i class="white-fg material-icons" style="position: relative; top: 9px;">keyboard_arrow_down</i>
                             </div>
@@ -95,9 +92,7 @@
             <!-- ******************************************** -->
             <div id="nav" class="white-fg black-bg" flex layout="row" style="height: 170px;">
                 <div flex="100" layout="row" layout-align="space-between center">
-                    <div style="padding-left: 40px;">
-                        <img src="images/owls-logo.png"/>
-                    </div>
+                    <div class="nav-logo" style="padding-left: 40px;"></div>
                     <div flex="70" layout="row" layout-align="space-between center" style="padding-right: 40px;">
                         <div>
                             <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
@@ -120,10 +115,11 @@
                         <div>
                             <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
                         </div>
-                        <button class="md-fab md-mini md-button md-ink-ripple gold3-bg posr" type="button">
-                            <!--<md-icon md-svg-src="images/caret.png"></md-icon>-->
-                            <div class="md-ripple-container" style="text-transform: lowercase">in</div>
-                        </button>
+                        <a href="https://www.linkedin.com/in/johnlrogers/">
+                            <button class="circle-btn md-fab md-mini md-button md-ink-ripple gold3-bg posr" type="button">
+                                <div class="md-ripple-container" style="text-transform: lowercase"><strong>in</strong></div>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -131,7 +127,7 @@
             <!-- ******************************************** -->
             <!--                LAWYERS PIC                   -->
             <!-- ******************************************** -->
-            <div flex layout="row" style="background-image: url('images/lawyers-pic.png'); height: 660px;">
+            <div class="lawyers-banner" flex layout="row">
                 <div flex="100" layout="row" layout-align="center center">
                     <div class="font-size-40 white-fg" flex="25" flex-offset="55" layout-align="center" style="text-align: center;">Advice you'll rely on again and again and again.</div>
                 </div>
@@ -241,16 +237,16 @@
             </div>
 
             <!-- ******************************************** -->
-            <!--            FRANCHISING & LEGAL               -->
+            <!--                    CUPS                      -->
             <!-- ******************************************** -->
             <div id="services" class="white-fg" flex layout="row">
-                <div class="services-banner" flex="100" layout="row" layout-align="center start" style="height: 774px;">
+                <div class="services-banner" flex="100" layout="row" layout-align="center start">
                     <div class="font-size-40" style="padding-top: 160px;">Franchising & Legal Services</div>
                 </div>
             </div>
 
             <!-- ******************************************** -->
-            <!--            FRANCHISING INTRO                 -->
+            <!--                    SERVICES                  -->
             <!-- ******************************************** -->
             <div class="white-bg" flex layout="row" layout-align="center start" style="padding: 100px 0;">
                 <div class="font-size-30 gold1-fg" flex="33">Franchising is about faithfully duplicating the factors responsible for a franchisor's business success.</div>
@@ -260,7 +256,7 @@
             </div>
 
             <!-- ******************************************** -->
-            <!--                HAMBURGERS                    -->
+            <!--            SERVICES: HAMBURGERS              -->
             <!-- ******************************************** -->
             <div class="white-bg" flex layout="column" layout-align="center center">
                 <div class="font-weight-bold font-size-25">Have you found the secret sauce?</div>
@@ -269,23 +265,15 @@
                 <div layout="row" class="buffer gray1-fg" style="width:50px;"></div>
             </div>
             <div class="white-bg" flex layout="row" layout-align="center center" style="padding-bottom: 50px;">
-                <div flex="20">
-                    <img src="images/burger.png"/>
-                </div>
-                <div flex="20">
-                    <img src="images/burger.png"/>
-                </div>
-                <div flex="20">
-                    <img src="images/burger.png"/>
-                </div>
-                <div flex="20">
-                    <img src="images/burger.png"/>
-                </div>
+                <div class="services-hamburger-one" flex="20"></div>
+                <div class="services-hamburger-two" flex="20"></div>
+                <div class="services-hamburger-three" flex="20"></div>
+                <div class="services-hamburger-four" flex="20"></div>
             </div>
 
 
             <!-- ******************************************** -->
-            <!--            FRANCHISING CONTENT               -->
+            <!--            SERVICES: FRANCHISING             -->
             <!-- ******************************************** -->
             <div class="white-bg black2-fg" flex layout="row" layout-align="center start" style="padding-bottom: 100px;">
                 <div flex="35" layout="column">
@@ -336,9 +324,7 @@
                             <div layout="row" class="buffer gray1-fg" style="width:50px;"></div>
                         </div>
                     </div>
-                    <div style="padding-bottom: 20px;">
-                        <img src="images/fries.png" />
-                    </div>
+                    <div class="services-fries" style="padding-bottom: 20px;"></div>
                     <div>
                         <h3 class="uppercase font-family-avenirnextr-demi">U.S. Franchisors</h3>
                         <p>Are you a U.S. franchisor considering an expansion to Canada? We can modify your franchise agreement and FDD to comply with Canadian law. For U.S franchisors, we provide: </p>
@@ -375,13 +361,11 @@
 
 
             <!-- ******************************************** -->
-            <!--                GENERAL LEGAL                 -->
+            <!--             SERVICES: GENERAL LEGAL          -->
             <!-- ******************************************** -->
             <div class="white-bg posr" flex layout="row" layout-align="center">
                 <div class="buffer gray1-fg" flex="70" layout="row"></div>
-                <div style="position: absolute; top: -50px; right: 23%;">
-                    <img src="images/sign-here.png" />
-                </div>
+                <div class="services-signhere posa"></div>
             </div>
             <div class="white-bg black2-fg" flex layout="column" layout-align="center start" style="padding-top: 120px;">
                 <div flex="100" layout="row" flex-offset="15">
@@ -490,7 +474,7 @@
             <!--              UPFRONT PRICING                 -->
             <!-- ******************************************** -->
             <div id="upfront" class="gold2-fg" flex layout="row">
-                <div class="upfront-banner" flex="100" layout="row" layout-align="center start" style="height: 758px;">
+                <div class="pricing-banner" flex="100" layout="row" layout-align="center start">
                     <div class="font-size-40" style="padding-top: 120px;">Up Front Pricing</div>
                 </div>
             </div>
@@ -507,11 +491,11 @@
                 <div flex="70" flex-offset="15">
                     <p>We appreciate that many clients dislike hourly rates because they want to know, up front, what their legal fees are going to be. That’s why Likewise offers the option of Up Front Pricing.</p>
                     <p>Once any major documents required of us have been determined, we will provide an up front fee quote in a client engagement letter, with a retainer required. The up front price will apply to all work specified in the engagement letter. Only if additional work is required will an hourly rate apply.  Disbursements and taxes will be extra. The engagement letter will cover all of these points.</p>
-                    <p style="font-weight: 700;">Need a fixed price? Drop us a line:</p>
+                    <p id="contact" style="font-weight: 700;">Need a fixed price? Drop us a line:</p>
                 </div>
                 <div flex="15" layout="row"></div>
             </div>
-            <div id="contact" class="white-bg" flex layout="row" layout-align="center center" style="padding-top: 30px; padding-bottom: 150px;">
+            <div class="white-bg" flex layout="row" layout-align="center center" style="padding-top: 30px; padding-bottom: 150px;">
                 <form name="userForm" action="https://formspree.io/alachkovics@gmail.com" method="post" flex="70">
                     <div layout="column">
                         <div flex="grow" layout="row" style="margin-bottom: 15px;" class="contact-input-container" ng-class="{ 'validation-error': !validName }">
@@ -561,8 +545,7 @@
                      onclick="window.open('https://www.google.ca/maps/place/1125+Howe+St,+Vancouver,+BC+V6Z+2K8/@49.2788715,-123.1283545,17z/data=!3m1!4b1!4m5!3m4!1s0x548673d4f918da71:0x5cca229fc5d0c616!8m2!3d49.2788715!4d-123.1261658', '_blank')"
                      flex="100"
                      layout="row"
-                     layout-align="center start"
-                     style="height: 430px;">
+                     layout-align="center start">
                 </div>
             </div>
 
@@ -600,9 +583,7 @@
                     <div style="padding-bottom: 20px;">
                         <img src="images/owls-logo.png"/>
                     </div>
-                    <div>
-                        <img src="images/banner-logo.png"/>
-                    </div>
+                    <div class="footer-logo"></div>
                     <div class="gold2-fg">
                         <h2>Franchise & Business Law</h2>
                     </div>
