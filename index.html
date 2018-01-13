@@ -20,7 +20,7 @@
             <!--                CONTACT                       -->
             <!-- ******************************************** -->
             <div id="likewise" class="font-family-avenirnextr-demi white-fg black-bg" flex layout="row" layout-align="end start"  style="height: 200px;">
-                <div style="padding: 40px 15px;">
+                <div class="font-size-15" style="padding: 40px 15px;">
                     Phone: 604.559.6201
                 </div>
                 <a href="https://www.linkedin.com/in/johnlrogers/">
@@ -35,11 +35,11 @@
             <!-- ******************************************** -->
             <!--                BANNER                        -->
             <!-- ******************************************** -->
-            <div id="banner" class="font-family-avenirnextr-regular white-fg black-bg h500" flex layout="column">
+            <div id="banner" class="banner font-family-avenirnextr-regular white-fg black-bg" flex layout="column">
                 <div flex="100" layout="column" layout-align="start center">
                     <div class="banner-logo"></div>
-                    <div class="gold2-fg">
-                        <h2>Franchise & Business Law</h2>
+                    <div>
+                        <h3 class="banner-slogan gold2-fg">Franchise & Business Law</h3>
                     </div>
                 </div>
                 <div flex="100" layout="row" layout-align="center end">
@@ -69,17 +69,17 @@
             <!-- ******************************************** -->
             <!--                INTRODUCTION                  -->
             <!-- ******************************************** -->
-            <div id="introduction" class="white-fg gold2-bg" flex layout="row" style="height:450px;">
+            <div id="introduction" class="introduction white-fg gold2-bg" flex>
                 <div flex layout="column">
-                    <div flex="100" layout="row" layout-align="center end">
-                        <h1>Go forth and multiply</h1>
+                    <div class="introduction-title" flex="100" layout="row" layout-align="center end">
+                        <h2>Go forth and multiply</h2>
                     </div>
-                    <div flex="100" layout="row">
-                        <div flex="66" flex-offset="15">
+                    <div class="introduction-content" flex="100" layout="row">
+                        <div flex="70" flex-offset="15">
                             Likewise* is a boutique law practice managed by John L. Rogers, and focussed on helping business ownersto multiply their success, often through franchising. At Likewise, we feel that franchising works best, when itworks for everyone concerned. That’s why we focus on ensuring our clients enter into franchise agreements that are comprehensive, unambiguous and, above all, fair. We know, from decades of experience, that fair contracts engender mutual respect, cooperation and success. If you feel likewise, please contact <a class="gold5-fg" href="mailto:john@likewise.law">john@likewise.law</a>
                         </div>
                     </div>
-                    <div flex="100" layout="row" layout-align="center">
+                    <div class="introduction-scroll-caret" flex="100" layout="row" layout-align="center">
                         <a href="#nav" class="bounce" style="padding: 20px;">
                             <i class="white-fg material-icons">keyboard_arrow_down</i>
                         </a>
@@ -92,28 +92,31 @@
             <!-- ******************************************** -->
             <div id="nav" class="white-fg black-bg" flex layout="row" style="height: 170px;">
                 <div flex="100" layout="row" layout-align="space-between center">
-                    <div class="nav-logo" style="padding-left: 40px;"></div>
+                    <md-sidenav class="md-sidenav-left" md-component-id="side-nav" md-disable-backdrop="" md-whiteframe="4">
+                        hallo this is a sidenav
+                    </md-sidenav>
+                    <div class="nav-logo" style="padding-left: 40px;" ng-click="toggleSideNav()"></div>
                     <div flex="70" layout="row" layout-align="space-between center" style="padding-right: 40px;">
                         <div>
-                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
+                            <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#cv">John L. Rogers</a>
+                            <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#cv">John L. Rogers</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#services">Services</a>
+                            <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#services">Services</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#testimonials">Testimonials</a>
+                            <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#testimonials">Testimonials</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#publications">Publications</a>
+                            <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#publications">Publications</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#upfront">Up Front Fees</a>
+                            <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#upfront">Up Front Fees</a>
                         </div>
                         <div>
-                            <a class="nav-link white-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
+                            <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
                         </div>
                         <a href="https://www.linkedin.com/in/johnlrogers/">
                             <button class="circle-btn md-fab md-mini md-button md-ink-ripple gold3-bg posr" type="button">
@@ -602,9 +605,13 @@
         <script src="node_modules/angular-material/angular-material.min.js"></script>
         <script>
             var app = angular.module('likewiseApp',['ngMaterial']);
-            app.controller('likewiseCtrl', function($scope) {
+            app.controller('likewiseCtrl', function($scope, $timeout, $mdSidenav) {
                 $scope.validName = true;
                 $scope.validMail = true;
+
+                $scope.toggleSideNav = function () {
+                    $mdSidenav('side-nav').toggle();
+                };
 
                 $scope.validate = function (event) {
                     $scope.validName = !!$scope.user_name;

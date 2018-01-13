@@ -1,5 +1,9 @@
+.nav-link {
+    font-size: 17px;
+}
+
 .nav-link:hover {
-    color: #d3d3d3;
+    color: #fff !important;
 }
 
 .contact-submit-btn {

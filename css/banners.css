@@ -9,6 +9,14 @@
 /*                  OWLS                      */
 /**********************************************/
 
+.banner {
+    height: 500px;
+}
+
+.banner-slogan {
+    font-weight: normal;
+}
+
 .banner-owl-one,
 .banner-owl-two,
 .banner-owl-three {
@@ -33,6 +41,14 @@
 }
 
 @media screen and (max-width: 1075px) {
+    .banner {
+        height: 400px;
+    }
+
+    .banner-slogan {
+        font-size: 22px;
+    }
+
     .banner-owl-one,
     .banner-owl-two,
     .banner-owl-three {
@@ -58,6 +74,14 @@
 }
 
 @media screen and (max-width: 700px) {
+    .banner {
+        height: 340px;
+    }
+
+    .banner-slogan {
+        font-size: 20px;
+    }
+
     .banner-owl-one,
     .banner-owl-two,
     .banner-owl-three {
@@ -88,6 +112,35 @@
     .banner-owl-buffer-two,
     .banner-owl-three-blink {
         display: none;
+    }
+}
+
+/**********************************************/
+/*               INTRODUCTION                 */
+/**********************************************/
+
+.introduction-title {
+    padding-top: 7%;
+}
+
+.introduction-content {
+    padding-top: 1%;
+}
+
+.introduction-scroll-caret {
+    padding-top: 2%;
+    padding-bottom: 7%;
+}
+
+@media screen and (max-width: 1075px) {
+    .introduction-scroll-caret {
+        padding-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .introduction-title {
+        padding-top: 10%;
     }
 }
 
