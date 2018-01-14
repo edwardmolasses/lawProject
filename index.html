@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="css/banners.css">
         <link rel="stylesheet" href="css/forms.css">
         <link rel="stylesheet" href="css/images.css">
+        <link rel="stylesheet" href="css/cv.css">
+        <link rel="stylesheet" href="css/services.css">
         <link rel="stylesheet" href="css/resets.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
@@ -46,7 +48,7 @@
                 <div class="black-bg" flex="100" layout="column" layout-align="start center">
                     <div class="banner-logo"></div>
                     <div>
-                        <h3 class="banner-slogan gold2-fg">Franchise & Business Law</h3>
+                        <h4 class="banner-slogan gold2-fg font-size-22" style="margin-top: 15px;">Franchise & Business Law</h4>
                     </div>
                 </div>
                 <div flex="100" layout="row" layout-align="center end">
@@ -82,7 +84,7 @@
                         <h2>Go forth and multiply</h2>
                     </div>
                     <div class="introduction-content" flex="100" layout="row">
-                        <div flex="70" flex-offset="15">
+                        <div class="font-size-20" flex="70" flex-offset="15">
                             Likewise* is a boutique law practice managed by John L. Rogers, and focussed on helping business ownersto multiply their success, often through franchising. At Likewise, we feel that franchising works best, when itworks for everyone concerned. That’s why we focus on ensuring our clients enter into franchise agreements that are comprehensive, unambiguous and, above all, fair. We know, from decades of experience, that fair contracts engender mutual respect, cooperation and success. If you feel likewise, please contact <a class="gold5-fg" href="mailto:john@likewise.law">john@likewise.law</a>
                         </div>
                     </div>
@@ -97,14 +99,11 @@
             <!-- ******************************************** -->
             <!--                NAV LINKS                     -->
             <!-- ******************************************** -->
-            <div id="nav" class="nav white-fg black-bg" flex layout="row">
+            <div id="nav" class="nav white-fg black-bg" flex layout="row" ng-hide="isHamburgerMenuOpen">
                 <div flex="100" layout="row" layout-align="space-between start">
                     <div class="nav-logo posr"></div>
-                    <div flex="10" class="hamburger-menu-btn">
-                    </div>
+                    <div flex="10" class="hamburger-menu-btn cp no-outline" ng-click="openHamburger()"></div>
                     <div class="nav-links" flex="70" flex-md="80" layout="row" layout-align="space-between center" style="padding-right: 40px;">
-                        <div class="hamburger-menu-close-btn">
-                        </div>
                         <div>
                             <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
                         </div>
@@ -134,11 +133,35 @@
                     </div>
                 </div>
             </div>
+            <div id="nav" class="nav-hamburger-menu white-fg black-bg" flex layout="column" layout-align="start end" ng-hide="!isHamburgerMenuOpen">
+                <div flex="10" class="hamburger-menu-close-btn cp no-outline" ng-click="closeHamburger()"></div>
+                <div>
+                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
+                </div>
+                <div>
+                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#cv">John L. Rogers</a>
+                </div>
+                <div>
+                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#services">Services</a>
+                </div>
+                <div>
+                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#testimonials">Testimonials</a>
+                </div>
+                <div>
+                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#publications">Publications</a>
+                </div>
+                <div>
+                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#upfront">Up Front Fees</a>
+                </div>
+                <div>
+                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
+                </div>
+            </div>
 
             <!-- ******************************************** -->
             <!--                LAWYERS PIC                   -->
             <!-- ******************************************** -->
-            <div class="lawyers-banner" flex layout="row">
+            <div class="lawyers-banner" flex layout="row" ng-hide="isHamburgerMenuOpen">
                 <div flex="100" layout="row" layout-align="center start">
                     <div class="lawyers-banner-title white-fg" flex="25" flex-xs="100" flex-offset="55" flex-offset-xs="0" layout="column" layout-align="center" style="text-align: center;">
                         <div>Advice you'll rely on again and again and again.</div>
@@ -150,28 +173,108 @@
             <!-- ******************************************** -->
             <!--                CV OVERVIEW                   -->
             <!-- ******************************************** -->
-            <div id="cv" class="gold1-fg white-bg font-size-30" layout="row">
-                <div flex="30" flex-offset="10" layout="row" style="padding: 100px 0;">
-                    John advises on all areas of franchise & business law from inception to termination
+            <div id="cv" class="gold1-fg white-bg" layout="row" layout-align-xs="center">
+                <div class="cv-quote" flex="60" flex-xs="100" flex-gt-sm="40" flex-offset="10" flex-offset-xs="0" layout="row" layout-align-xs="space-around center" style="text-align: center;">
+                    <div>John advises on all areas of franchise & business law from inception to termination</div>
                 </div>
             </div>
-            <div class="black2-fg white-bg" flex layout="row" layout-align="space-between center">
-                <div flex="50" flex-offset="35" layout="column">
+            <div class="cv-intro black2-fg white-bg" flex layout="row" layout-align="space-between center">
+                <div flex="50" flex-xs="100" flex-offset="35" flex-offset-xs="0" layout="column">
                     <h3>A LEADING FRANCHISE AND BUSINESS LAWYER</h3>
                     <p>John L. Rogers is internationally recognized in franchise law and also practices corporate/commercial law and general business law. John has been recommended by L’expert many times, he has been named to the International Who’s Who of Franchise Lawyers and designated a “Legal Eagle.” in the U.S. by Franchise Times. John is among the most respected franchise lawyers in Canada with decades of experience helping franchisors, franchisees and their advisors navigate the legal complexities of franchising and corporate/commercial law.</p>
                     <p>John has been admitted to the bar in both British Columbia and Ontario and has experience advising on franchise legislation and drafting of franchise disclosure documents in all franchise-regulated provinces. For four years, John served as general counsel, a director and secretary of the Canadian Franchise Association. In those roles he helped develop policies and programs for the betterment of the franchise industry in Canada and promotion of ethical conduct and camaraderie among industry members.</p>
                     <p>Download <a href="#"> John's Curriculum Vitae</a></p>
                 </div>
             </div>
-            <div class="white-bg" flex layout="row" layout-align="center" style="padding: 100px 0;">
+            <div class="cv-bumper white-bg" flex layout="row" layout-align="center">
                 <div class="buffer gray1-fg" flex="70" layout="row"></div>
             </div>
 
             <!-- ******************************************** -->
-            <!--                CV CONTENT                    -->
+            <!--           CV CONTENT: 2 COLUMN               -->
             <!-- ******************************************** -->
-            <div class="cv-listing black2-fg white-bg" flex layout="row" layout-align="center start" style="padding-bottom: 100px;">
-                <div flex="20" layout="column" layout-align="center stretch">
+            <div class="cv-listing-double-column black2-fg white-bg" flex layout="row" layout-align="center start">
+                <div flex="40" layout="column">
+                    <div>
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li>Franchise Law</li>
+                            <li>Corporate/Commercial</li>
+                            <li>General Business Law</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Areas of Expertise</h3>
+                        <ul>
+                            <li>Franchise Law</li>
+                            <li>Corporate/Commercial</li>
+                            <li>General Business Law</li>
+                            <li>Franchise Disclosure Documents</li>
+                            <li>Franchise Agreements</li>
+                            <li>Master Franchise Agreements</li>
+                            <li>Area Development Agreements</li>
+                            <li>Security Agreements</li>
+                            <li>Franchise Regulation</li>
+                            <li>Cross Border Expansion</li>
+                            <li>Negotiation / Settlement of Disputes</li>
+                            <li>Franchise Renewals</li>
+                            <li>Franchise Termination</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Awards & Distinctions</h3>
+                        <ul>
+                            <li>L’expert-ranked for Franchise Law (Canada)</li>
+                            <li>Who’s Who of Franchise Lawyers (International)</li>
+                            <li>“Legal Eagle” (US)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Industry Associations</h3>
+                        <ul>
+                            <li>Member, Canadian Franchise Association and its Legal & Legislative Committee</li>
+                            <li>Former General Counsel, Director, Secretary, Canadian Franchise Association</li>
+                            <li>Former Member, Supplier Forum Board, International Franchise Association</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="width:20px;"></div>
+                <div flex="40">
+                    <div>
+                        <h3>Community Commitments</h3>
+                        <ul>
+                            <li>Sovereign Order of St. John, Knights Hospitaller, Knight of Justice</li>
+                            <li>Palliative Care Volunteer, St. John Hospice, Vancouver</li>
+                            <li>Canadian Franchise Association, Legal & Legislative Committee</li>
+                            <li>Vancouver College Alumni Association</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Education & Calls to Bar</h3>
+                        <ul>
+                            <li>Calls to Bar: British Columbia, 1977; Ontario, 2005</li>
+                            <li>Bachelor of Laws, University of British Columbia, 1976</li>
+                            <li>Bachelor of Arts (English Literature), University of British Columbia, 1973</li>
+                            <li>Vancouver College (with Honours), 1968</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Publications</h3>
+                        <ul>
+                            <li>Co-author of Chapter 1 “Structuring an Expansion to Canada”, ABA’s book on Franchising in Canada, January, 2017</li>
+                            <li>Editor and Co-author, Chapter on Canada, “The Franchise Law Review” (Annual Book, 2017), London, UK</li>
+                            <li>“Essential Differences exist between Trademarks in Canada and the US”, 2012</li>
+                            <li>“New Franchises Act (BC)”, 2017</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ******************************************** -->
+            <!--           CV CONTENT: 3 COLUMN               -->
+            <!-- ******************************************** -->
+            <div class="cv-listing-triple-column black2-fg white-bg" flex layout="row" layout-align="center start">
+                <div flex="25" layout="column" layout-align="center stretch">
                     <div>
                         <h3>Practice Areas</h3>
                         <ul>
@@ -208,7 +311,7 @@
                     </div>
                 </div>
                 <div style="width:20px;"></div>
-                <div flex="20" layout="column">
+                <div flex="25" layout="column">
                     <div>
                         <h3>Industry Associations</h3>
                         <ul>
@@ -237,7 +340,7 @@
                     </div>
                 </div>
                 <div style="width:20px;"></div>
-                <div flex="20" layout="row">
+                <div flex="25" layout="row">
                     <div>
                         <h3>Publications</h3>
                         <ul>
@@ -255,17 +358,30 @@
             <!-- ******************************************** -->
             <div id="services" class="white-fg" flex layout="row">
                 <div class="services-banner" flex="100" layout="row" layout-align="center start">
-                    <div class="font-size-40" style="padding-top: 160px;">Franchising & Legal Services</div>
+                    <div>
+                        <div>Franchising & Legal Services</div>
+                        <div class="services-banner-scroll-caret" flex="100" layout="row" layout-align="center">
+                            <a href="#services-intro" class="bounce" style="padding: 20px;">
+                                <i class="gold2-fg material-icons">keyboard_arrow_down</i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- ******************************************** -->
             <!--                    SERVICES                  -->
             <!-- ******************************************** -->
-            <div class="white-bg" flex layout="row" layout-align="center start" style="padding: 100px 0;">
-                <div class="font-size-30 gold1-fg" flex="33">Franchising is about faithfully duplicating the factors responsible for a franchisor's business success.</div>
-                <div class="black2-fg" flex="33" style="padding-top: 110px;">
+            <div id="services-intro" class="services-intro white-bg" flex layout="column" layout-align="center start">
+                <div class="services-intro-quote gold1-fg" flex layout="row">
+                    <div flex-gt-md="50" flex-md="55" flex-sm="60">
+                    Franchising is about faithfully duplicating the factors responsible for a franchisor's business success.
+                    </div>
+                </div>
+                <div class="services-intro-detail black2-fg" flex layout="row" layout-align="end start">
+                    <div flex-gt-md="50" flex-md="55" flex-sm="60">
                     Faithful duplication of every aspect of a business model, operating systems, products, training and marketing is what makes visiting your favourite coffee spot in Vancouver or Dallas feel the same. It’s what makes the hamburger you had in Beijing taste just like the one back home. And, it’s what makes the franchise business model work. At Likewise, we draft franchise documents that ensure faithful duplication and engender respect for a business relationship by clearly defining the roles and responsibilities of all parties to  franchise agreements including franchisors, franchisees and suppliers.
+                    </div>
                 </div>
             </div>
 
@@ -275,8 +391,8 @@
             <div class="white-bg" flex layout="column" layout-align="center center">
                 <div class="font-weight-bold font-size-25">Have you found the secret sauce?</div>
             </div>
-            <div class="white-bg" flex layout="row" layout-align="center center" style="padding: 20px 0 40px 0;">
-                <div layout="row" class="buffer gray1-fg" style="width:50px;"></div>
+            <div class="services-franchising-bumper-line white-bg" flex layout="row" layout-align="center center" style="padding: 20px 0 40px 0;">
+                <div layout="row" class="gray1-fg"></div>
             </div>
             <div class="white-bg" flex layout="row" layout-align="center center" style="padding-bottom: 50px;">
                 <div class="services-hamburger-one" flex="20"></div>
@@ -289,8 +405,8 @@
             <!-- ******************************************** -->
             <!--            SERVICES: FRANCHISING             -->
             <!-- ******************************************** -->
-            <div class="white-bg black2-fg" flex layout="row" layout-align="center start" style="padding-bottom: 100px;">
-                <div flex="35" layout="column">
+            <div class="services-franchising white-bg black2-fg" flex layout="row" layout-xs="column" layout-align="center start" layout-align-xs="center center">
+                <div flex="35" flex-xs="100" layout="column">
                     <div>
                         <h3 class="uppercase font-family-avenirnextr-demi">Franchisors</h3>
                         <p>If you have a concept and are considering starting or expanding a franchise system in Canada, we can help. Likewise advises franchisors on: </p>
@@ -303,8 +419,8 @@
                             <li>General franchise advice.</li>
                         </ul>
                     </div>
-                    <div style="padding-top: 200px;">
-                        <div>
+                    <div>
+                        <div class="services-franchising-bumper services-franchising-bumper-stores">
                             <div class="white-bg" flex layout="column" layout-align="center center">
                                 <div class="font-weight-bold font-size-25">
                                     <img src="images/store-icon.png" />
@@ -312,8 +428,8 @@
                                     <img src="images/store-icon.png" />
                                 </div>
                             </div>
-                            <div class="white-bg" flex layout="row" layout-align="center center" style="padding-top: 20px;">
-                                <div layout="row" class="buffer gray1-fg" style="width:50px;"></div>
+                            <div class="services-franchising-bumper-line white-bg" flex layout="row" layout-align="center center">
+                                <div layout="row" class="gray1-fg"></div>
                             </div>
                         </div>
                         <h3 class="uppercase font-family-avenirnextr-demi">Franchisees</h3>
@@ -329,16 +445,16 @@
                 </div>
                 <div layout="column" style="width: 30px;">
                 </div>
-                <div flex="35" layout="column">
+                <div flex="35" flex-xs="100" layout="column" layout-align="center center">
                     <div style="padding-top: 150px;">
-                        <div class="white-bg" flex layout="column" layout-align="center center">
+                        <div class="white-bg" flex layout="row" layout-align="center center">
                             <div class="font-weight-bold font-size-25">Expanding to Canada?</div>
                         </div>
-                        <div class="white-bg" flex layout="row" layout-align="center center" style="padding: 20px 0 30px 0;">
-                            <div layout="row" class="buffer gray1-fg" style="width:50px;"></div>
+                        <div class="services-franchising-bumper-line white-bg" flex layout="row" layout-align="center center" style="padding: 20px 0 30px 0;">
+                            <div layout="row" class="gray1-fg"></div>
                         </div>
                     </div>
-                    <div class="services-fries" style="padding-bottom: 20px;"></div>
+                    <div class="services-fries"></div>
                     <div>
                         <h3 class="uppercase font-family-avenirnextr-demi">U.S. Franchisors</h3>
                         <p>Are you a U.S. franchisor considering an expansion to Canada? We can modify your franchise agreement and FDD to comply with Canadian law. For U.S franchisors, we provide: </p>
@@ -350,7 +466,7 @@
                             <li>General advice on compliance with Canadian laws and customs.</li>
                         </ul>
                     </div>
-                    <div style="padding-top: 50px;">
+                    <div class="services-franchising-bumper services-franchising-bumper-trucks" style="padding-top: 50px;">
                         <div class="white-bg" flex layout="column" layout-align="center center">
                             <div class="font-weight-bold font-size-25">
                                 <img src="images/truck-icon.png" />
@@ -358,8 +474,8 @@
                                 <img src="images/truck-icon.png" />
                             </div>
                         </div>
-                        <div class="white-bg" flex layout="row" layout-align="center center" style="padding-top: 20px;">
-                            <div layout="row" class="buffer gray1-fg" style="width:50px;"></div>
+                        <div class="services-franchising-bumper-line white-bg" flex layout="row" layout-align="center center">
+                            <div layout="row" class="gray1-fg"></div>
                         </div>
                     </div>
                     <div>
@@ -616,9 +732,18 @@
         <script src="node_modules/angular-material/angular-material.min.js"></script>
         <script>
             var app = angular.module('likewiseApp',['ngMaterial']);
-            app.controller('likewiseCtrl', function($scope, $timeout, $mdSidenav) {
+            app.controller('likewiseCtrl', function($scope) {
                 $scope.validName = true;
                 $scope.validMail = true;
+                $scope.isHamburgerMenuOpen = false;
+
+                $scope.openHamburger = function () {
+                    $scope.isHamburgerMenuOpen = true;
+                };
+
+                $scope.closeHamburger = function () {
+                    $scope.isHamburgerMenuOpen = false;
+                };
 
                 $scope.validate = function (event) {
                     $scope.validName = !!$scope.user_name;

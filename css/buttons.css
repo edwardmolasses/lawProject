@@ -24,6 +24,22 @@
     display: none;
 }
 
+.hamburger-menu-close-btn {
+    margin: 15px 34px 0 0;
+    height: 36px; width: 36px;
+    background: url('../images/hamburger-menu-close.jpg') no-repeat center;
+}
+
+.nav-hamburger-menu {
+    height: 666px
+}
+
+.nav-hamburger-link {
+    font-size: 25px;
+    line-height: 2.5;
+    padding-right: 140px;
+}
+
 @media screen and (max-width: 1090px) {
     .nav > div {
         padding-top: 20px;
@@ -42,9 +58,6 @@
         height: 36px; width: 36px;
         display: block;
         background: url('../images/hamburger-menu.jpg') no-repeat center;
-    }
-
-    .hamburger-menu-close-btn {
     }
 }
 

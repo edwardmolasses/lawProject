@@ -40,16 +40,6 @@
     background: url('../images/burger.png') no-repeat center;
 }
 
-@media screen and (max-width: 1160px) {
-    .services-hamburger-one,
-    .services-hamburger-two,
-    .services-hamburger-three,
-    .services-hamburger-four {
-        height: 179px; width: 205px;
-        background: url('../images/1024burger.png') no-repeat center;
-    }
-}
-
 @media screen and (max-width: 1060px) {
     .services-hamburger-one,
     .services-hamburger-two,
@@ -87,12 +77,15 @@
 .services-fries {
     height: 175px; width: 518px;
     background: url('../images/fries.png') no-repeat center;
+    /*background-size: cover;*/
+    background-size: 500px 165px, cover;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1399px) {
     .services-fries {
-        height: 152px; width: 455px;
-        background-image: url('../images/1024fries.png');
+        height: 115px; width: 348px;
+        background-image: url('../images/768fries.png') no-repeat center;
+        background-size: contain;
     }
 }
 
@@ -114,37 +107,6 @@
     .services-fries {
         height: 61px; width: 185px;
         background-image: url('../images/320fries.png');
-    }
-}
-
-/**********************************************/
-/*                  SIGN HERE                 */
-/**********************************************/
-
-.services-signhere {
-    top: -50px; right: 23%;
-    height: 195px; width: 414px;
-    background: url('../images/sign-here.png') no-repeat center;
-}
-
-@media screen and (max-width: 1024px) {
-    .services-signhere {
-        height: 156px; width: 331px;
-        background-image: url('../images/1024signhere.png');
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .services-signhere {
-        height: 124px; width: 261px;
-        background-image: url('../images/480signhere.png');
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .services-signhere {
-        height: 100px; width: 210px;
-        background-image: url('../images/320signhere.png');
     }
 }
 

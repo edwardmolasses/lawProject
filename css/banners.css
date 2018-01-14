@@ -1,5 +1,5 @@
 
-.cv-listing {
+.cv-listing-triple-column {
     background-image: url('../images/beans.png');
     background-repeat: no-repeat;
     background-position: 100% 108%;
@@ -229,10 +229,28 @@
     background: url('../images/cups.png') no-repeat center;
 }
 
+.services-banner > div {
+    font-size: 40px;
+    padding-top: 160px;
+}
+
+.services-banner-scroll-caret {
+    padding-top: 470px;
+}
+
 @media screen and (max-width: 1075px) {
     .services-banner {
         height: 633px;
         background-image: url('../images/1024cups.png');
+    }
+
+    .services-banner > div {
+        font-size: 35px;
+        padding-top: 130px;
+    }
+
+    .services-banner-scroll-caret {
+        padding-top: 350px;
     }
 }
 
@@ -241,12 +259,26 @@
         height: 562px;
         background-image: url('../images/768cups.png');
     }
+
+    .services-banner > div {
+        font-size: 30px;
+        padding-top: 110px;
+    }
+
+    .services-banner-scroll-caret {
+        padding-top: 300px;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .services-banner {
         height: 517px;
         background-image: url('../images/480cups.png');
+    }
+
+    .services-banner > div {
+        font-size: 25px;
+        padding-top: 110px;
     }
 }
 
