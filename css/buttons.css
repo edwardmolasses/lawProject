@@ -1,9 +1,51 @@
+.nav {
+    height: 170px;
+}
+
+.nav > div {
+    padding-top: 60px;
+}
+
+.nav-logo {
+    left: 60px;
+    height: 47px; width: 115px;
+    background: url('../images/owls-logo.png') no-repeat center;
+}
+
 .nav-link {
     font-size: 17px;
 }
 
 .nav-link:hover {
     color: #fff !important;
+}
+
+.hamburger-menu-btn {
+    display: none;
+}
+
+@media screen and (max-width: 1090px) {
+    .nav > div {
+        padding-top: 20px;
+    }
+
+    .nav-logo {
+        left: 30px
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu-btn {
+        margin-top: 10px;
+        height: 36px; width: 36px;
+        display: block;
+        background: url('../images/hamburger-menu.jpg') no-repeat center;
+    }
+
+    .hamburger-menu-close-btn {
+    }
 }
 
 .contact-submit-btn {

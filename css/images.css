@@ -26,10 +26,7 @@
 /*                  NAV LOGO                  */
 /**********************************************/
 
-.nav-logo {
-    height: 47px; width: 115px;
-    background: url('../images/owls-logo.png') no-repeat center;
-}
+/* see buttons.css */
 
 /**********************************************/
 /*             SERVICES: BURGERS              */

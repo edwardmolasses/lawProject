@@ -43,7 +43,7 @@
             <!--                BANNER                        -->
             <!-- ******************************************** -->
             <div id="banner" class="banner font-family-avenirnextr-regular white-fg black-bg" flex layout="column">
-                <div flex="100" layout="column" layout-align="start center">
+                <div class="black-bg" flex="100" layout="column" layout-align="start center">
                     <div class="banner-logo"></div>
                     <div>
                         <h3 class="banner-slogan gold2-fg">Franchise & Business Law</h3>
@@ -97,13 +97,14 @@
             <!-- ******************************************** -->
             <!--                NAV LINKS                     -->
             <!-- ******************************************** -->
-            <div id="nav" class="white-fg black-bg" flex layout="row" style="height: 170px;">
-                <div flex="100" layout="row" layout-align="space-between center">
-                    <md-sidenav class="md-sidenav-left" md-component-id="side-nav" md-disable-backdrop="" md-whiteframe="4">
-                        hallo this is a sidenav
-                    </md-sidenav>
-                    <div class="nav-logo" style="padding-left: 40px;" ng-click="toggleSideNav()"></div>
-                    <div flex="70" layout="row" layout-align="space-between center" style="padding-right: 40px;">
+            <div id="nav" class="nav white-fg black-bg" flex layout="row">
+                <div flex="100" layout="row" layout-align="space-between start">
+                    <div class="nav-logo posr"></div>
+                    <div flex="10" class="hamburger-menu-btn">
+                    </div>
+                    <div class="nav-links" flex="70" flex-md="80" layout="row" layout-align="space-between center" style="padding-right: 40px;">
+                        <div class="hamburger-menu-close-btn">
+                        </div>
                         <div>
                             <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
                         </div>
@@ -138,8 +139,11 @@
             <!--                LAWYERS PIC                   -->
             <!-- ******************************************** -->
             <div class="lawyers-banner" flex layout="row">
-                <div flex="100" layout="row" layout-align="center center">
-                    <div class="font-size-40 white-fg" flex="25" flex-offset="55" layout-align="center" style="text-align: center;">Advice you'll rely on again and again and again.</div>
+                <div flex="100" layout="row" layout-align="center start">
+                    <div class="lawyers-banner-title white-fg" flex="25" flex-xs="100" flex-offset="55" flex-offset-xs="0" layout="column" layout-align="center" style="text-align: center;">
+                        <div>Advice you'll rely on again and again and again.</div>
+                        <i class="lawyers-banner-title-caret gold2-fg material-icons posr">keyboard_arrow_down</i>
+                    </div>
                 </div>
             </div>
 
@@ -615,10 +619,6 @@
             app.controller('likewiseCtrl', function($scope, $timeout, $mdSidenav) {
                 $scope.validName = true;
                 $scope.validMail = true;
-
-                $scope.toggleSideNav = function () {
-                    $mdSidenav('side-nav').toggle();
-                };
 
                 $scope.validate = function (event) {
                     $scope.validName = !!$scope.user_name;
