@@ -16,6 +16,10 @@
     font-family: AvenirNextRegular;
 }
 
+.font-size-10 {
+    font-size: 12px;
+}
+
 .font-size-15 {
     font-size: 15px;
 }
@@ -46,6 +50,10 @@
 
 .font-weight-bold {
     font-weight: bold;
+}
+
+.font-weight-normal {
+    font-weight: normal;
 }
 
 .uppercase {

@@ -1,0 +1,30 @@
+.publications-image-one,
+.publications-image-two,
+.publications-image-three {
+    margin-bottom: 30px;
+    height: 211px; width: 348px;
+}
+
+.publications-image-one {
+    background: url('../images/publications-structuring.png') no-repeat center;
+}
+
+.publications-image-two {
+    background: url('../images/publications-franchise-review.png') no-repeat center;
+}
+
+.publications-image-three {
+    background: url('../images/publications-franchise-act.png') no-repeat center;
+}
+
+.publications-detail {
+    margin: 0;
+    height: 140px;
+}
+
+.publications-title-buffer {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    width: 30px;
+    border-bottom: solid 1px #d3d3d3;
+}
