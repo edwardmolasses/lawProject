@@ -42,6 +42,10 @@
     background: url('../images/sign-here.png') no-repeat center;
 }
 
+.services-general {
+    padding-top: 120px;
+}
+
 @media screen and (max-width: 1280px) {
     .services-intro {
         padding: 100px 100px;
@@ -68,9 +72,17 @@
     }
 }
 
+@media screen and (max-width: 960px) {
+
+}
+
 @media screen and (max-width: 600px) {
     .services-franchising {
-        padding: 0 50px;
+        padding: 0 50px 100px 50px;
+    }
+
+    .services-general {
+        padding-top: 140px;
     }
 
     .services-franchising-bumper-stores {
@@ -93,59 +105,3 @@
     }
 }
 
-/*.cv-bumper {*/
-    /*padding: 100px 0;*/
-/*}*/
-
-/*@media screen and (max-width: 900px) {*/
-    /*.cv-listing-triple-column {*/
-        /*background: none;*/
-        /*background-color: #fff;*/
-    /*}*/
-/*}*/
-
-/*@media screen and (max-width: 768px) {*/
-    /*.cv-quote {*/
-        /*font-size: 25px;*/
-    /*}*/
-
-    /*.cv-bumper {*/
-        /*padding: 50px 0 70px 0;*/
-    /*}*/
-
-    /*.cv-listing-double-column {*/
-        /*height: auto;*/
-        /*visibility: visible;*/
-        /*padding-bottom: 70px;*/
-    /*}*/
-
-    /*.cv-listing-triple-column {*/
-        /*height: 0;*/
-        /*padding: 0;*/
-        /*visibility: hidden;*/
-    /*}*/
-/*}*/
-
-/*@media screen and (max-width: 600px) {*/
-    /*.cv-quote {*/
-        /*font-size: 25px;*/
-        /*padding: 50px 40px;*/
-    /*}*/
-
-    /*.cv-intro {*/
-        /*padding: 0 40px 50px 40px;*/
-    /*}*/
-
-    /*.cv-bumper {*/
-        /*padding: 0;*/
-        /*height: 0;*/
-        /*border: none;*/
-    /*}*/
-
-    /*.cv-listing-double-column,*/
-    /*.cv-listing-triple-column {*/
-        /*height: 0;*/
-        /*padding: 0;*/
-        /*visibility: hidden;*/
-    /*}*/
-/*}*/
