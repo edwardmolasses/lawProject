@@ -88,7 +88,7 @@
                     </div>
                     <div class="introduction-content" flex="100" layout="row">
                         <div class="font-size-20" flex="70" flex-offset="15">
-                            Likewise* is a boutique law practice managed by John L. Rogers, and focussed on helping business ownersto multiply their success, often through franchising. At Likewise, we feel that franchising works best, when itworks for everyone concerned. That’s why we focus on ensuring our clients enter into franchise agreements that are comprehensive, unambiguous and, above all, fair. We know, from decades of experience, that fair contracts engender mutual respect, cooperation and success. If you feel likewise, please contact <a class="gold5-fg" href="mailto:john@likewise.law">john@likewise.law</a>
+                            Likewise* is a boutique law practice managed by John L. Rogers, and focused on helping business owners to multiply their success, often through franchising. At Likewise, we feel that franchising works best, when it works for everyone concerned. That’s why we focus on ensuring our clients enter into franchise agreements that are comprehensive, unambiguous and, above all, fair. We know, from decades of experience, that fair contracts engender mutual respect, cooperation and success. If you feel likewise, please contact <a class="gold5-fg" href="mailto:john@likewise.law">john@likewise.law</a>
                         </div>
                     </div>
                     <div class="introduction-scroll-caret" flex="100" layout="row" layout-align="center">
@@ -522,7 +522,7 @@
                         <ul>
                             <li>Incorporations</li>
                             <li>Planning, structuring and implementing contractual relationships on a local or cross-border basis.</li>
-                            <li>Providing opinions on Canadiancommercial legal issues.</li>
+                            <li>Providing opinions on Canadian commercial legal issues.</li>
                         </ul>
                         <div flex flex-sm="15" flex-xs="15"></div>
                     </div>
@@ -621,23 +621,23 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="carousel__prev">
-                            <label for="carousel-1"></label>
-                            <label for="carousel-2"></label>
-                            <label for="carousel-3"></label>
-                            <label for="carousel-4"></label>
+                        <div id="carousel__prev" class="carousel__prev">
+                            <label id="carousel-1" for="carousel-1" onclick="setCounter(1)"></label>
+                            <label id="carousel-2" for="carousel-2" onclick="setCounter(2)"></label>
+                            <label id="carousel-3" for="carousel-3" onclick="setCounter(3)"></label>
+                            <label id="carousel-4" for="carousel-4" onclick="setCounter(4)"></label>
                         </div>
-                        <div class="carousel__next">
-                            <label for="carousel-1"></label>
-                            <label for="carousel-2"></label>
-                            <label for="carousel-3"></label>
-                            <label for="carousel-4"></label>
+                        <div id="carousel__next" class="carousel__next">
+                            <label for="carousel-1" onclick="setCounter(1)"></label>
+                            <label for="carousel-2" onclick="setCounter(2)"></label>
+                            <label for="carousel-3" onclick="setCounter(3)"></label>
+                            <label for="carousel-4" onclick="setCounter(4)"></label>
                         </div>
                         <div class="carousel__nav">
-                            <label for="carousel-1"></label>
-                            <label for="carousel-2"></label>
-                            <label for="carousel-3"></label>
-                            <label for="carousel-4"></label>
+                            <label for="carousel-1" onclick="setCounter(1)"></label>
+                            <label for="carousel-2" onclick="setCounter(2)"></label>
+                            <label for="carousel-3" onclick="setCounter(3)"></label>
+                            <label for="carousel-4" onclick="setCounter(4)"></label>
                         </div>
                     </div>
                 </div>
@@ -702,7 +702,7 @@
             <!-- ******************************************** -->
             <div id="upfront" class="pricing gold2-fg" flex layout="row">
                 <div class="pricing-banner" flex="100" layout="row" layout-align="center start">
-                    <div class="font-size-40">Up Front Pricing</div>
+                    <div class="font-size-40">Up Front Fees</div>
                 </div>
             </div>
             <div class="pricing-scroll-caret white-bg" flex layout="row" layout-align="center center">
@@ -716,7 +716,7 @@
             <!-- ******************************************** -->
             <div class="white-bg black2-fg" flex layout="row" layout-align="center center">
                 <div flex="70" flex-offset="15">
-                    <p>We appreciate that many clients dislike hourly rates because they want to know, up front, what their legal fees are going to be. That’s why Likewise offers the option of Up Front Pricing.</p>
+                    <p>We appreciate that many clients dislike hourly rates because they want to know, up front, what their legal fees are going to be. That’s why Likewise offers the option of Up Front Fees.</p>
                     <p>Once any major documents required of us have been determined, we will provide an up front fee quote in a client engagement letter, with a retainer required. The up front price will apply to all work specified in the engagement letter. Only if additional work is required will an hourly rate apply.  Disbursements and taxes will be extra. The engagement letter will cover all of these points.</p>
                     <p id="contact" style="font-weight: 700;">Need a fixed price? Drop us a line:</p>
                 </div>
@@ -850,11 +850,24 @@
         <script src="node_modules/angular-aria/angular-aria.min.js"></script>
         <script src="node_modules/angular-material/angular-material.min.js"></script>
         <script>
+            var counter = 1;
+            var setCounter = function(slideNum) {
+                counter = slideNum;
+            };
+            (function(){
+                // setup testimonial carousel
+                setInterval(function(){
+                    document.getElementById('carousel-'+counter).click('click');
+                    counter = counter >= 4 ? 1 : counter + 1;
+                }, 10000);
+            })();
+
             var app = angular.module('likewiseApp',['ngMaterial']);
-            app.controller('likewiseCtrl', function($scope) {
+            app.controller('likewiseCtrl', function($scope, $timeout) {
                 $scope.validName = true;
                 $scope.validMail = true;
                 $scope.isHamburgerMenuOpen = false;
+
 
                 $scope.openHamburger = function () {
                     $scope.isHamburgerMenuOpen = true;
