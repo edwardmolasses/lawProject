@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="css/cv.css">
         <link rel="stylesheet" href="css/services.css">
         <link rel="stylesheet" href="css/publications.css">
+        <link rel="stylesheet" href="css/testimonials.css">
+        <link rel="stylesheet" href="css/pricing.css">
         <link rel="stylesheet" href="css/resets.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
@@ -500,31 +502,41 @@
                 <div class="buffer gray1-fg" flex="70" layout="row"></div>
                 <div class="services-signhere posa"></div>
             </div>
-            <div class="white-bg black2-fg" flex layout="column" layout-align="center start" style="padding-top: 120px;">
-                <div flex="100" layout="row" flex-offset="15">
-                    <div flex="100">
+            <div class="services-general white-bg black2-fg" flex layout="column" layout-align="center start">
+                <div flex="100"
+                     layout="row"
+                     flex-offset="15">
+                    <div flex="70">
                         <h2>General Legal Services</h2>
                         <p><strong>Not franchising?</strong> That’s ok, we also provide general commercial services including:</p>
                     </div>
+                    <div flex flex-sm="15" flex-xs="15"></div>
                 </div>
-                <div flex layout="row" flex-offset="15">
-                    <div flex="25">
+                <div class="services-general-detail"
+                     flex="70"
+                     layout="row"
+                     layout-sm="column"
+                     layout-xs="column"
+                     flex-offset="15">
+                    <div class="services-general-detail-one" flex layout="row">
                         <ul>
                             <li>Incorporations</li>
                             <li>Planning, structuring and implementing contractual relationships on a local or cross-border basis.</li>
                             <li>Providing opinions on Canadiancommercial legal issues.</li>
                         </ul>
+                        <div flex flex-sm="15" flex-xs="15"></div>
                     </div>
-                    <div flex="25">
+                    <div class="services-general-detail-two" flex layout="row">
                         <ul>
                             <li>Shareholders agreements</li>
                             <li>Joint venture agreements</li>
                             <li>Ongoing representation of Canadian and international clients.</li>
                         </ul>
+                        <div flex flex-sm="15" flex-xs="15"></div>
                     </div>
                 </div>
             </div>
-            <div flex="100" layout="row" layout-align="center center" class="white-bg" style="padding: 50px 0;">
+            <div class="services-general-scroll-caret white-bg" flex="100" layout="row" layout-align="center center">
                 <a href="#testimonials" class="bounce" style="padding: 20px;">
                     <i class="gold2-fg material-icons">keyboard_arrow_down</i>
                 </a>
@@ -533,7 +545,7 @@
             <!-- ******************************************** -->
             <!--                TESTIMONIALS                  -->
             <!-- ******************************************** -->
-            <div id="testimonials" class="white-fg gold2-bg" flex layout="row" style="padding: 130px 0 50px 0;">
+            <div id="testimonials" class="testimonials-title white-fg gold2-bg" flex layout="row" hide-sm hide-xs style="padding: 130px 0 50px 0;">
                 <div flex="100" layout="row" layout-align="center center">
                     <div>
                         <div class="font-size-40">Testimonials</div>
@@ -541,22 +553,22 @@
                     </div>
                 </div>
             </div>
-            <div class="white-fg gold2-bg" flex layout="row" layout-align="center start" style="padding-bottom: 80px;">
+            <div class="testimonials-content white-fg gold2-bg" flex layout="row" layout-align="center start" style="padding-bottom: 80px;">
                 <div style="width: 100%; min-width: 100%;">
-                    <div class="carousel">
+                    <div class="testimonials-content-carousel carousel">
                         <input type="radio" id="carousel-1" name="carousel[]" checked>
                         <input type="radio" id="carousel-2" name="carousel[]">
                         <input type="radio" id="carousel-3" name="carousel[]">
                         <input type="radio" id="carousel-4" name="carousel[]">
-                        <ul class="carousel__items" style="height: 540px; margin-top: -100px;">
-                            <li class="carousel__item" flex="100" layout="row" layout-align="center center">
-                                <div flex="20" layout="column" layout-align="center center" style="margin-top: -80px;">
-                                    <div class="font-size-30">I will never use another lawyer.</div>
-                                    <div class="posr">
+                        <ul class="testimonials-content-carousel-items carousel__items">
+                            <li class="carousel__item" flex="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center center">
+                                <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
+                                    <div class="testimonials-content-quote-text posr font-size-30">I will never use another lawyer.</div>
+                                    <div class="testimonials-content-quote-icon posr">
                                         <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 50px; left: -60px;">format_quote</i>
                                     </div>
                                 </div>
-                                <div flex="40" flex-offset="5">
+                                <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
                                     <div>
                                         <p>“Making John Rogers our attorney at Goodbye Graffiti was the best decision I ever made.</p>
                                         <p>I have worked with John since our conception 20 years ago. I would not be where I am today without his expertise in the world of franchising and his support as a friend. I was truly lucky to have met him before I began franchising. I will never use another lawyer. John is truly a loyal and trusted partner in any endeavor.”</p>
@@ -564,14 +576,14 @@
                                     <div><p>– <b>Perri Domm</b>, President and Owner, Goodbye Graffiti Inc.</p></div>
                                 </div>
                             </li>
-                            <li class="carousel__item" flex="100" layout="row" layout-align="center center">
-                                <div flex="20" layout="column" layout-align="center center" style="margin-top: -80px;">
-                                    <div class="font-size-30">Timely, commercial and pertinent advice.</div>
-                                    <div class="posr">
+                            <li class="carousel__item" flex="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center center">
+                                <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
+                                    <div class="testimonials-content-quote-text posr font-size-30">Timely, commercial and pertinent advice.</div>
+                                    <div class="testimonials-content-quote-icon posr">
                                         <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 40px; left: -40px;">format_quote</i>
                                     </div>
                                 </div>
-                                <div flex="40" flex-offset="5">
+                                <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
                                     <div>
                                         <p>“I have known and worked with John Rogers for more years than I care to remember.  We first met at international franchise events and have become firm friends.</p>
                                         <p>John provides very valuable updates to me concerning developments in relation to franchising in Canada and we have worked together on a number of assignments.  I have always found his advice to be timely, commercial and pertinent.”</p>
@@ -579,28 +591,28 @@
                                     <div><p>– <b>John Pratt</b>, Principal, Hamilton Pratt Solicitors, United Kingdom</p></div>
                                 </div>
                             </li>
-                            <li class="carousel__item" flex="100" layout="row" layout-align="center center">
-                                <div flex="20" layout="column" layout-align="center center" style="margin-top: -80px;">
-                                    <div class="font-size-30">Tremendous, to the point advice.</div>
-                                    <div class="posr">
+                            <li class="carousel__item" flex="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center center">
+                                <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
+                                    <div class="testimonials-content-quote-text posr font-size-30">Tremendous, to the point advice.</div>
+                                    <div class="testimonials-content-quote-icon posr">
                                         <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 50px; left: -60px;">format_quote</i>
                                     </div>
                                 </div>
-                                <div flex="40" flex-offset="5">
+                                <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
                                     <div>
-                                        <p>“I have worked with John Rogers for 6 years. During this time John has been tremendous at providing to the point advice. He has taken the time to learn our business model and understands our values. Accordingly his recommendations are relevant to Speedpro’s culture. John and I have worked together on several projects and he has always been professional, prompt and punctual. Speedpro enthusiastically recommends John Rogers for any and all types of Franchise legal matters.”</p>
+                                        <p>"I have worked with John Rogers for 6 years. During this time John has been tremendous at providing to the point advice. He has taken the time to learn our business model and understands our values. Accordingly his recommendations are relevant to Speedpro’s culture. John and I have worked together on several projects and he has always been professional, prompt and punctual. Speedpro enthusiastically recommends John Rogers for any and all types of Franchise legal matters.”</p>
                                     </div>
                                     <div><p>– <b>Stuart Burns</b>, President and Owner, Speedpro Canada</p></div>
                                 </div>
                             </li>
-                            <li class="carousel__item" flex="100" layout="row" layout-align="center center">
-                                <div flex="20" layout="column" layout-align="center center" style="margin-top: -80px;">
-                                    <div class="font-size-30">Our go-to resource in Canada.</div>
-                                    <div class="posr">
+                            <li class="carousel__item" flex="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center center">
+                                <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
+                                    <div class="testimonials-content-quote-text posr font-size-30">Our go-to resource in Canada.</div>
+                                    <div class="testimonials-content-quote-icon posr">
                                         <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 50px; left: -60px;">format_quote</i>
                                     </div>
                                 </div>
-                                <div flex="40" flex-offset="5">
+                                <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
                                     <div>
                                         <p>“John Rogers has for years been a go-to resource for responsive, practical, and sound advice and insight on behalf of our U.S. clients bringing their franchise systems into Canada, and dealing with ongoing legal issues under Canadian law.”</p>
                                     </div>
@@ -634,41 +646,53 @@
             <!-- ******************************************** -->
             <!--                PUBLICATIONS                  -->
             <!-- ******************************************** -->
-            <div id="publications" class="white-bg" flex layout="column" style="padding: 120px 0;">
-                <div class="publications-title gold2-fg" flex="100" layout="row" layout-align="center center" style="padding-bottom: 40px;">
+            <div id="publications" class="publications white-bg" flex layout="column">
+                <div class="publications-title gold2-fg" flex="100" layout="row" layout-align="center center">
                     <div>
                         <h1 class="font-family-avenirnext-regular font-weight-normal">Publications</h1>
                     </div>
                 </div>
-                <div class="white-bg black2-fg" flex layout="row" layout-align="center start">
-                    <div flex="25" layout="column">
-                        <div class="publications-image-one"></div>
-                        <h3 class="uppercase">Structuring and expansion to Canada</h3>
-                        <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
-                        <p class="publications-detail">A non-Canadian franchisor planning to expand its franchise system to Canada must make important decisions on the type of legal entity to use for the expansion and the method by which the expansion...</p>
-                        <p>
-                            <a href="documents/Structuring%20Expansion%20Canada.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
-                        </p>
+                <div class="white-bg black2-fg" flex layout="row" layout-sm="column" layout-xs="column" layout-align="center start" layout-align-sm="center" layout-align-xs="center">
+                    <div class="publications-card-one" flex="25" flex-sm="100" flex-xs="100" layout="column" layout-align="center">
+                        <div flex layout-align="start center">
+                            <div class="publications-image-one"></div>
+                        </div>
+                        <div class="publications-card-one-detail" flex layout="column" layout-align="center">
+                            <h3 class="uppercase">Structuring and expansion to Canada</h3>
+                            <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
+                            <p class="publications-detail">A non-Canadian franchisor planning to expand its franchise system to Canada must make important decisions on the type of legal entity to use for the expansion and the method by which the expansion...</p>
+                            <p>
+                                <a href="documents/Structuring%20Expansion%20Canada.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
+                            </p>
+                        </div>
                     </div>
                     <div style="width:30px;"></div>
-                    <div flex="25" layout="column">
-                        <div class="publications-image-two"></div>
-                        <h3 class="uppercase">The Franchise Law Review: Chapter 20 – Canada</h3>
-                        <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
-                        <p class="publications-detail">Franchising is very active in Canada, where an estimated 1,300 franchise brands and 78,000 franchised units currently operate. Approximately 45 per cent of all retail sales in Canada are made from franchised outlets...</p>
-                        <p>
-                            <a href="documents/The%20Franchise%20Law%20Review_%20Chapter%2020%20-%20Canada.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
-                        </p>
+                    <div class="publications-card-two" flex="25" flex-sm="100" flex-xs="100" layout="column">
+                        <div flex layout-align="start center">
+                            <div class="publications-image-two"></div>
+                        </div>
+                        <div class="publications-card-one-detail" flex layout="column" layout-align="center">
+                            <h3 class="uppercase">The Franchise Law Review: Chapter 20 – Canada</h3>
+                            <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
+                            <p class="publications-detail">Franchising is very active in Canada, where an estimated 1,300 franchise brands and 78,000 franchised units currently operate. Approximately 45 per cent of all retail sales in Canada are made from franchised outlets...</p>
+                            <p>
+                                <a href="documents/The%20Franchise%20Law%20Review_%20Chapter%2020%20-%20Canada.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
+                            </p>
+                        </div>
                     </div>
                     <div style="width:30px;"></div>
-                    <div flex="25" layout="column">
-                        <div class="publications-image-three"></div>
-                        <h3 class="uppercase">Franchises Act (BC) – In Force February 1, 2017</h3>
-                        <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
-                        <p class="publications-detail">Franchise regulation has arrived in British Columbia.  The new BC Franchises Act (the “BC Act” or simply the “Act”) and regulations to it (the “BC Regs” or simply the “Regs”) came into force on Feb...</p>
-                        <p>
-                            <a href="documents/Franchises%20Act%20(BC)%20–%20In%20Force%20February%201,%202017.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
-                        </p>
+                    <div class="publications-card-three" flex="25" flex-sm="100" flex-xs="100" layout="column">
+                        <div flex layout-align="start center">
+                            <div class="publications-image-three"></div>
+                        </div>
+                        <div class="publications-card-one-detail" flex layout="column" layout-align="center">
+                            <h3 class="uppercase">Franchises Act (BC) – In Force February 1, 2017</h3>
+                            <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
+                            <p class="publications-detail">Franchise regulation has arrived in British Columbia.  The new BC Franchises Act (the “BC Act” or simply the “Act”) and regulations to it (the “BC Regs” or simply the “Regs”) came into force on Feb...</p>
+                            <p>
+                                <a href="documents/Franchises%20Act%20(BC)%20–%20In%20Force%20February%201,%202017.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -676,13 +700,13 @@
             <!-- ******************************************** -->
             <!--              UPFRONT PRICING                 -->
             <!-- ******************************************** -->
-            <div id="upfront" class="gold2-fg" flex layout="row">
+            <div id="upfront" class="pricing gold2-fg" flex layout="row">
                 <div class="pricing-banner" flex="100" layout="row" layout-align="center start">
-                    <div class="font-size-40" style="padding-top: 120px;">Up Front Pricing</div>
+                    <div class="font-size-40">Up Front Pricing</div>
                 </div>
             </div>
-            <div class="white-bg" flex layout="row" layout-align="center center" style="padding: 50px 0;">
-                <a href="#contact" class="bounce" style="padding: 20px;">
+            <div class="pricing-scroll-caret white-bg" flex layout="row" layout-align="center center">
+                <a href="#contact" class="bounce">
                     <i class="gold2-fg material-icons">keyboard_arrow_down</i>
                 </a>
             </div>
@@ -698,7 +722,7 @@
                 </div>
                 <div flex="15" layout="row"></div>
             </div>
-            <div class="white-bg" flex layout="row" layout-align="center center" style="padding-top: 30px; padding-bottom: 150px;">
+            <div class="contact-form white-bg" flex layout="row" layout-align="center center" style="padding-top: 30px; padding-bottom: 150px;">
                 <form name="userForm" action="https://formspree.io/alachkovics@gmail.com" method="post" flex="70">
                     <div layout="column">
                         <div flex="grow" layout="row" style="margin-bottom: 15px;" class="contact-input-container" ng-class="{ 'validation-error': !validName }">
@@ -755,30 +779,52 @@
             <!-- ******************************************** -->
             <!--                 FOOTER                       -->
             <!-- ******************************************** -->
-            <div class="white-fg black-bg" flex layout="row" layout-align="center start" style="padding: 100px 0;">
-                <div flex="20" layout="row" flex-offset="5">
+            <div class="footer white-fg black-bg" flex layout="row" layout-sm="column" layout-xs="column" layout-align="center center" style="padding: 100px 0;">
+                <div class="footer-column"
+                     flex="30"
+                     flex-sm="100"
+                     flex-xs="100"
+                     flex-offset="5"
+                     flex-offset-sm="0"
+                     flex-offset-xs="0"
+                     layout="row"
+                     layout-align="end center"
+                     layout-align-sm="start center"
+                     layout-align-xs="start center">
                     <div>
                         <p>1400 - 1125 Howe Street</p>
                         <p>Vancouver, BC Canada V6Z 2K8</p>
                         <p>Phone: 604 559 6201</p>
                     </div>
                 </div>
-                <div flex="5"></div>
-                <div flex="20" layout="row">
+                <div class="footer-column"
+                     flex="30"
+                     flex-sm="100"
+                     flex-xs="100"
+                     layout="row"
+                     layout-align="center center"
+                     layout-align-sm="start center"
+                     layout-align-xs="start center">
                     <div>
                         <p><b>John L. Rogers</b>, Senior Lawyer</p>
                         <p>Cell: 604 209 6451</p>
                         <p>Email: <a href="mailto:john@likewise.law">john@likewise.law</a></p>
                     </div>
                 </div>
-                <div flex="5"></div>
-                <div flex="20" layout="row">
+                <div class="footer-column"
+                     flex="30"
+                     flex-sm="100"
+                     flex-xs="100"
+                     layout="row"
+                     layout-align="start center"
+                     hide-sm hide-xs>
                     <div>
                         <p><b>Tonia Amaral</b>, Assistant</p>
                         <p>Direct: 604 559 6201</p>
                         <p>Email: <a href="mailto:tonia@likewise.law">tonia@likewise.law</a></p>
                     </div>
                 </div>
+                <div flex="5" hide-sm hide-xs></div>
             </div>
 
             <div class="white-fg black-bg" flex layout="row" style="padding-bottom: 150px;">
@@ -809,11 +855,6 @@
                 $scope.validName = true;
                 $scope.validMail = true;
                 $scope.isHamburgerMenuOpen = false;
-                $scope.sportImages = [
-                    'https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg',
-                    'http://koncha.890m.com/wp-content/uploads/2016/06/2.jpg',
-                    'https://vignette.wikia.nocookie.net/ben10fanfiction/images/d/dc/Hot-air-balloon.jpg/revision/latest?cb=20130502162217'
-                ];
 
                 $scope.openHamburger = function () {
                     $scope.isHamburgerMenuOpen = true;
