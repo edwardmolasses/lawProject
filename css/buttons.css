@@ -1,6 +1,11 @@
-.nav {
+.nav-content {
     height: 170px;
+    padding-bottom: 55px;
 }
+/*.nav-content-hamburger {*/
+    /*height: 170px;*/
+    /*padding-bottom: 25px;*/
+/*}*/
 
 .nav > div {
     padding-top: 60px;
@@ -51,6 +56,10 @@
 
     .nav-links {
         display: none;
+    }
+
+    .nav-content {
+        height: 90px;
     }
 
     .hamburger-menu-btn {

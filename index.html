@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="css/resets.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
-    <body ng-app="likewiseApp" style="max-width: 1400px; margin: 0 auto;" ng-controller="likewiseCtrl" ng-cloak="">
+    <body id="body" ng-app="likewiseApp" style="max-width: 1400px; margin: 0 auto;" ng-controller="likewiseCtrl" ng-cloak="">
         <div>
             <!-- ******************************************** -->
             <!--                CONTACT                       -->
@@ -102,8 +102,8 @@
             <!-- ******************************************** -->
             <!--                NAV LINKS                     -->
             <!-- ******************************************** -->
-            <div id="nav" class="nav white-fg black-bg" flex layout="row" ng-hide="isHamburgerMenuOpen">
-                <div flex="100" layout="row" layout-align="space-between start">
+            <div id="nav" class="nav white-fg black-bg" flex layout="row" ng-hide="isHamburgerMenuOpen" set-class-when-at-top="fix-to-top">
+                <div id="nav-content" class="nav-content" flex="100" layout="row" layout-align="space-between start">
                     <div class="nav-logo posr"></div>
                     <div flex="10" class="hamburger-menu-btn cp no-outline" ng-click="openHamburger()"></div>
                     <div class="nav-links" flex="70" flex-md="80" layout="row" layout-align="space-between center" style="padding-right: 40px;">
@@ -135,29 +135,29 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div id="nav" class="nav-hamburger-menu white-fg black-bg" flex layout="column" layout-align="start end" ng-hide="!isHamburgerMenuOpen">
-                <div flex="10" class="hamburger-menu-close-btn cp no-outline" ng-click="closeHamburger()"></div>
-                <div>
-                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
-                </div>
-                <div>
-                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#cv">John L. Rogers</a>
-                </div>
-                <div>
-                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#services">Services</a>
-                </div>
-                <div>
-                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#testimonials">Testimonials</a>
-                </div>
-                <div>
-                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#publications">Publications</a>
-                </div>
-                <div>
-                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#upfront">Up Front Fees</a>
-                </div>
-                <div>
-                    <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
+                <div id="nav-content-hamburger" class="nav-hamburger-menu white-fg black-bg" flex layout="column" layout-align="start end" ng-hide="!isHamburgerMenuOpen">
+                    <div flex="10" class="hamburger-menu-close-btn cp no-outline" ng-click="closeHamburger()"></div>
+                    <div>
+                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
+                    </div>
+                    <div>
+                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#cv">John L. Rogers</a>
+                    </div>
+                    <div>
+                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#services">Services</a>
+                    </div>
+                    <div>
+                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#testimonials">Testimonials</a>
+                    </div>
+                    <div>
+                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#publications">Publications</a>
+                    </div>
+                    <div>
+                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#upfront">Up Front Fees</a>
+                    </div>
+                    <div>
+                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
+                    </div>
                 </div>
             </div>
 
@@ -560,6 +560,7 @@
                         <input type="radio" id="carousel-2" name="carousel[]">
                         <input type="radio" id="carousel-3" name="carousel[]">
                         <input type="radio" id="carousel-4" name="carousel[]">
+                        <input type="radio" id="carousel-5" name="carousel[]">
                         <ul class="testimonials-content-carousel-items carousel__items">
                             <li class="carousel__item" flex="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center center">
                                 <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
@@ -570,8 +571,8 @@
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
                                     <div>
-                                        <p>“Making John Rogers our attorney at Goodbye Graffiti was the best decision I ever made.</p>
-                                        <p>I have worked with John since our conception 20 years ago. I would not be where I am today without his expertise in the world of franchising and his support as a friend. I was truly lucky to have met him before I began franchising. I will never use another lawyer. John is truly a loyal and trusted partner in any endeavor.”</p>
+                                        <p>Making John Rogers our attorney at Goodbye Graffiti was the best decision I ever made.</p>
+                                        <p>I have worked with John since our conception 20 years ago. I would not be where I am today without his expertise in the world of franchising and his support as a friend. I was truly lucky to have met him before I began franchising. I will never use another lawyer. John is truly a loyal and trusted partner in any endeavor.</p>
                                     </div>
                                     <div><p>– <b>Perri Domm</b>, President and Owner, Goodbye Graffiti Inc.</p></div>
                                 </div>
@@ -585,8 +586,8 @@
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
                                     <div>
-                                        <p>“I have known and worked with John Rogers for more years than I care to remember.  We first met at international franchise events and have become firm friends.</p>
-                                        <p>John provides very valuable updates to me concerning developments in relation to franchising in Canada and we have worked together on a number of assignments.  I have always found his advice to be timely, commercial and pertinent.”</p>
+                                        <p>I have known and worked with John Rogers for more years than I care to remember.  We first met at international franchise events and have become firm friends.</p>
+                                        <p>John provides very valuable updates to me concerning developments in relation to franchising in Canada and we have worked together on a number of assignments.  I have always found his advice to be timely, commercial and pertinent.</p>
                                     </div>
                                     <div><p>– <b>John Pratt</b>, Principal, Hamilton Pratt Solicitors, United Kingdom</p></div>
                                 </div>
@@ -600,7 +601,7 @@
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
                                     <div>
-                                        <p>"I have worked with John Rogers for 6 years. During this time John has been tremendous at providing to the point advice. He has taken the time to learn our business model and understands our values. Accordingly his recommendations are relevant to Speedpro’s culture. John and I have worked together on several projects and he has always been professional, prompt and punctual. Speedpro enthusiastically recommends John Rogers for any and all types of Franchise legal matters.”</p>
+                                        <p>I have worked with John Rogers for 6 years. During this time John has been tremendous at providing to the point advice. He has taken the time to learn our business model and understands our values. Accordingly his recommendations are relevant to Speedpro’s culture. John and I have worked together on several projects and he has always been professional, prompt and punctual. Speedpro enthusiastically recommends John Rogers for any and all types of Franchise legal matters.</p>
                                     </div>
                                     <div><p>– <b>Stuart Burns</b>, President and Owner, Speedpro Canada</p></div>
                                 </div>
@@ -614,9 +615,25 @@
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
                                     <div>
-                                        <p>“John Rogers has for years been a go-to resource for responsive, practical, and sound advice and insight on behalf of our U.S. clients bringing their franchise systems into Canada, and dealing with ongoing legal issues under Canadian law.”</p>
+                                        <p>John Rogers has for years been a go-to resource for responsive, practical, and sound advice and insight on behalf of our U.S. clients bringing their franchise systems into Canada, and dealing with ongoing legal issues under Canadian law.</p>
                                     </div>
                                     <div><p>– <b>Kenneth Costello</b>, Partner, Bryan Cave Attorneys USA
+                                    </p></div>
+                                </div>
+                            </li>
+                            <li class="carousel__item" flex="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center center">
+                                <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
+                                    <div class="testimonials-content-quote-text posr font-size-30">A man of the utmost integrity.</div>
+                                    <div class="testimonials-content-quote-icon posr">
+                                        <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 50px; left: -60px;">format_quote</i>
+                                    </div>
+                                </div>
+                                <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
+                                    <div>
+                                        <p>I have known John Rogers for over 20 years. I have seen him many times at international franchising conferences in the USA and for a few years John and I were on the Board together of the Supplier Forum of the International Franchise Association.</p>
+                                        <p>John has lived in both Vancouver and Toronto. He is very personable and is an excellent franchising lawyer. He is a man of the utmost integrity and I have no hesitation in recommending him as a franchising lawyer and wish him the very best for his new firm.</p>
+                                    </div>
+                                    <div><p>– <b>Stewart Germann</b>, Partner, Stewart Germann Law Office
                                     </p></div>
                                 </div>
                             </li>
@@ -626,18 +643,21 @@
                             <label id="carousel-2" for="carousel-2" onclick="setCounter(2)"></label>
                             <label id="carousel-3" for="carousel-3" onclick="setCounter(3)"></label>
                             <label id="carousel-4" for="carousel-4" onclick="setCounter(4)"></label>
+                            <label id="carousel-5" for="carousel-5" onclick="setCounter(5)"></label>
                         </div>
                         <div id="carousel__next" class="carousel__next">
                             <label for="carousel-1" onclick="setCounter(1)"></label>
                             <label for="carousel-2" onclick="setCounter(2)"></label>
                             <label for="carousel-3" onclick="setCounter(3)"></label>
                             <label for="carousel-4" onclick="setCounter(4)"></label>
+                            <label for="carousel-5" onclick="setCounter(5)"></label>
                         </div>
                         <div class="carousel__nav">
                             <label for="carousel-1" onclick="setCounter(1)"></label>
                             <label for="carousel-2" onclick="setCounter(2)"></label>
                             <label for="carousel-3" onclick="setCounter(3)"></label>
                             <label for="carousel-4" onclick="setCounter(4)"></label>
+                            <label for="carousel-5" onclick="setCounter(5)"></label>
                         </div>
                     </div>
                 </div>
@@ -854,25 +874,74 @@
             var setCounter = function(slideNum) {
                 counter = slideNum;
             };
+            var getScrollXY = function() {
+                var scrOfX = 0, scrOfY = 0;
+                if( typeof( window.pageYOffset ) == 'number' ) {
+                    //Netscape compliant
+                    scrOfY = window.pageYOffset;
+                    scrOfX = window.pageXOffset;
+                } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+                    //DOM compliant
+                    scrOfY = document.body.scrollTop;
+                    scrOfX = document.body.scrollLeft;
+                } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+                    //IE6 standards compliant mode
+                    scrOfY = document.documentElement.scrollTop;
+                    scrOfX = document.documentElement.scrollLeft;
+                }
+                return [ scrOfX, scrOfY ];
+            };
+
+            var scrollToY = function(posY) {
+                if( typeof( window.pageYOffset ) == 'number' ) {
+                    //Netscape compliant
+                    window.scrollTo(0, posY);
+                } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+                    //DOM compliant
+                    document.body.scrollTo(0, posY);
+                } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+                    //IE6 standards compliant mode
+                    document.documentElement.scrollTo(0, posY);
+                }
+                return true;
+            };
+
             (function(){
                 // setup testimonial carousel
                 setInterval(function(){
+                    var windowScrollY = getScrollXY()[1];
                     document.getElementById('carousel-'+counter).click('click');
-                    counter = counter >= 4 ? 1 : counter + 1;
+                    console.log('windowScrollY: '+windowScrollY);
+                    scrollToY(windowScrollY);
+                    counter = counter >= 5 ? 1 : counter + 1;
                 }, 10000);
+
+                window.onscroll = function () {
+                    var navOffset = document.getElementById('nav').offsetTop;
+                    var windowScrollY = getScrollXY()[1];
+
+                    if (navOffset < windowScrollY) {
+                        document.getElementById('nav-content').classList.add("fix-to-top");
+                        document.getElementById('nav-content-hamburger').classList.add("fix-to-top");
+                    }
+
+                    if (navOffset > windowScrollY) {
+                        document.getElementById('nav-content').classList.remove("fix-to-top");
+                        document.getElementById('nav-content-hamburger').classList.remove("fix-to-top");
+                    }
+                    console.log(windowScrollY);
+                };
             })();
 
             var app = angular.module('likewiseApp',['ngMaterial']);
-            app.controller('likewiseCtrl', function($scope, $timeout) {
+            app.controller('likewiseCtrl', function($scope) {
                 $scope.validName = true;
                 $scope.validMail = true;
                 $scope.isHamburgerMenuOpen = false;
 
-
                 $scope.openHamburger = function () {
                     $scope.isHamburgerMenuOpen = true;
                 };
-
                 $scope.closeHamburger = function () {
                     $scope.isHamburgerMenuOpen = false;
                 };

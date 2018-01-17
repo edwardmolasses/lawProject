@@ -39,3 +39,12 @@
     border: none;
     -moz-outline-style: none
 }
+
+.fix-to-top {
+    position: fixed;
+    top: 0;
+    width: 1400px;
+    background-color: black;
+    opacity: 1;
+    z-index: 5000;
+}
