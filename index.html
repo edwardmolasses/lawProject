@@ -102,11 +102,11 @@
             <!-- ******************************************** -->
             <!--                NAV LINKS                     -->
             <!-- ******************************************** -->
-            <div id="nav" class="nav white-fg black-bg" flex layout="row" ng-hide="isHamburgerMenuOpen" set-class-when-at-top="fix-to-top">
-                <div id="nav-content" class="nav-content" flex="100" layout="row" layout-align="space-between start">
+            <div id="nav" class="nav white-fg black-bg" flex layout="row">
+                <div id="nav-content" class="nav-content posr" flex="100" layout="row" layout-align="space-between start">
                     <div class="nav-logo posr"></div>
                     <div flex="10" class="hamburger-menu-btn cp no-outline" ng-click="openHamburger()"></div>
-                    <div class="nav-links" flex="70" flex-md="80" layout="row" layout-align="space-between center" style="padding-right: 40px;">
+                    <div class="nav-links" flex="70" flex-md="80" layout="row" layout-align="space-between center" style="padding-right: 40px;" ng-hide="isHamburgerMenuOpen">
                         <div>
                             <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
                         </div>
@@ -134,29 +134,29 @@
                             </button>
                         </a>
                     </div>
-                </div>
-                <div id="nav-content-hamburger" class="nav-hamburger-menu white-fg black-bg" flex layout="column" layout-align="start end" ng-hide="!isHamburgerMenuOpen">
-                    <div flex="10" class="hamburger-menu-close-btn cp no-outline" ng-click="closeHamburger()"></div>
-                    <div>
-                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
-                    </div>
-                    <div>
-                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#cv">John L. Rogers</a>
-                    </div>
-                    <div>
-                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#services">Services</a>
-                    </div>
-                    <div>
-                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#testimonials">Testimonials</a>
-                    </div>
-                    <div>
-                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#publications">Publications</a>
-                    </div>
-                    <div>
-                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#upfront">Up Front Fees</a>
-                    </div>
-                    <div>
-                        <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
+                    <div class="nav-hamburger-menu white-fg black-bg posa w100p" flex layout="column" layout-align="start end" ng-hide="!isHamburgerMenuOpen">
+                        <div flex="10" class="hamburger-menu-close-btn cp no-outline" ng-click="closeHamburger()"></div>
+                        <div style="margin-top: 30px;">
+                            <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
+                        </div>
+                        <div>
+                            <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#cv">John L. Rogers</a>
+                        </div>
+                        <div>
+                            <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#services">Services</a>
+                        </div>
+                        <div>
+                            <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#testimonials">Testimonials</a>
+                        </div>
+                        <div>
+                            <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#publications">Publications</a>
+                        </div>
+                        <div>
+                            <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#upfront">Up Front Fees</a>
+                        </div>
+                        <div>
+                            <a class="nav-hamburger-link gray1-fg text-decoration-none pt15 pb15" href="#contact">Contact</a>
+                        </div>
                     </div>
                 </div>
             </div>

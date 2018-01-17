@@ -6,6 +6,10 @@
     position: relative;
 }
 
+.w100p {
+    width: 100%;
+}
+
 .pt15 {
    padding-top: 15px;
 }
