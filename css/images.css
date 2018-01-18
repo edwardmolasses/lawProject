@@ -8,7 +8,17 @@
     background: url('../images/banner-logo.png') no-repeat center;
 }
 
+.banner-slogan {
+    font-weight: normal;
+    padding-right: 23px;
+}
+
 @media screen and (max-width: 1075px) {
+    .banner-slogan {
+        padding-right: 22px;
+        font-size: 20px;
+    }
+
     .banner-logo {
         height: 60px; width: 290px;
         background: url('../images/1024logo.png') no-repeat center;

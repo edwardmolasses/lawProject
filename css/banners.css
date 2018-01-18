@@ -13,10 +13,6 @@
     height: 500px;
 }
 
-.banner-slogan {
-    font-weight: normal;
-}
-
 .banner-owl-one,
 .banner-owl-two,
 .banner-owl-three {
@@ -43,10 +39,6 @@
 @media screen and (max-width: 1075px) {
     .banner {
         height: 400px;
-    }
-
-    .banner-slogan {
-        font-size: 22px;
     }
 
     .banner-owl-one,

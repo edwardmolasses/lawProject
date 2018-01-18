@@ -4,6 +4,41 @@
     height: 540px;
 }
 
+.testimonials-content-quote-icon-one {
+    top: 50px;
+    left: -60px;
+    opacity: 0.3;
+    font-size: 50px !important;
+}
+
+.testimonials-content-quote-icon-two {
+    top: 40px;
+    left: -40px;
+    opacity: 0.3;
+    font-size: 50px !important;
+}
+
+.testimonials-content-quote-icon-three {
+    top: 50px;
+    left: -60px;
+    opacity: 0.3;
+    font-size: 50px !important;
+}
+
+.testimonials-content-quote-icon-four {
+    top: 50px;
+    left: -60px;
+    opacity: 0.3;
+    font-size: 50px !important;
+}
+
+.testimonials-content-quote-icon-five {
+    top: 50px;
+    left: -60px;
+    opacity: 0.3;
+    font-size: 50px !important;
+}
+
 @media screen and (max-width: 1280px) {
     .testimonials-content-quote {
         margin-top: 0;

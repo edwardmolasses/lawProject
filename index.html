@@ -26,19 +26,18 @@
         <link rel="stylesheet" href="css/resets.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
-    <body id="body" ng-app="likewiseApp" style="max-width: 1400px; margin: 0 auto;" ng-controller="likewiseCtrl" ng-cloak="">
+    <body id="body" class="max-w1400 m0auto" ng-app="likewiseApp" ng-controller="likewiseCtrl" ng-cloak="">
         <div>
             <!-- ******************************************** -->
             <!--                CONTACT                       -->
             <!-- ******************************************** -->
             <div id="likewise" class="font-family-avenirnextr-demi white-fg black-bg" flex layout="row" layout-align="end start"  style="height: 200px;">
-                <div class="font-size-15" style="padding: 40px 15px;">
+                <div class="font-size-15 pt40 pb40 pl15 pr15">
                     Phone: 604.559.6201
                 </div>
                 <a href="https://www.linkedin.com/in/johnlrogers/" target="_blank">
-                    <button class="circle-btn md-fab md-mini md-button md-ink-ripple gold3-bg posr"
-                            type="button"
-                            style="top: 20px; margin-right: 40px;">
+                    <button class="circle-btn md-fab md-mini md-button md-ink-ripple gold3-bg posr t20 mr40"
+                            type="button">
                         <div class="md-ripple-container" style="text-transform: lowercase"><strong>in</strong></div>
                     </button>
                 </a>
@@ -51,14 +50,14 @@
                 <div class="black-bg" flex="100" layout="column" layout-align="start center">
                     <div class="banner-logo"></div>
                     <div>
-                        <h4 class="banner-slogan gold2-fg font-size-22" style="margin-top: 15px;">Franchise & Business Law</h4>
+                        <h4 class="banner-slogan gold2-fg font-size-22 mt15">Franchise & Business Law</h4>
                     </div>
                 </div>
                 <div flex="100" layout="row" layout-align="center end">
                     <div class="banner-owl-one"></div>
-                    <div class="banner-owl-buffer-one" style="width:2%"></div>
+                    <div class="banner-owl-buffer-one w2p"></div>
                     <div class="banner-owl-two"></div>
-                    <div class="banner-owl-buffer-two" style="width:2%"></div>
+                    <div class="banner-owl-buffer-two w2p"></div>
                     <div class="banner-owl-three posr">
                         <div class="banner-owl-three-blink blink posa">
                         </div>
@@ -66,14 +65,14 @@
                 </div>
                 <div flex="100 lightgreen posr" layout="row" layout-align="center end">
                     <a href="#introduction">
-                        <button class="circle-btn md-fab md-button md-ink-ripple gold3-bg posr" type="button" style="top: 33px;">
+                        <button class="circle-btn md-fab md-button md-ink-ripple gold3-bg posr box-shadow-none t33" type="button">
                             <div class="md-ripple-container" style="">
-                                <i class="white-fg material-icons" style="position: relative; top: 9px;">keyboard_arrow_down</i>
+                                <i class="white-fg material-icons posr t9">keyboard_arrow_down</i>
                             </div>
                         </button>
                     </a>
-                    <div class="posa" style="padding: 0 25px 10px 0; right: 0;">
-                        <div class="white-fg" style="font-size: 13px;">*Denotes Law Corporation</div>
+                    <div class="posa pt0 pr25 pb10 pl0 r0">
+                        <div class="white-fg font-size-13">*Denotes Law Corporation</div>
                     </div>
                 </div>
             </div>
@@ -92,7 +91,7 @@
                         </div>
                     </div>
                     <div class="introduction-scroll-caret" flex="100" layout="row" layout-align="center">
-                        <a href="#nav" class="bounce" style="padding: 20px;">
+                        <a href="#nav" class="bounce p20">
                             <i class="white-fg material-icons">keyboard_arrow_down</i>
                         </a>
                     </div>
@@ -106,7 +105,7 @@
                 <div id="nav-content" class="nav-content posr" flex="100" layout="row" layout-align="space-between start">
                     <div class="nav-logo posr"></div>
                     <div flex="10" class="hamburger-menu-btn cp no-outline" ng-click="openHamburger()"></div>
-                    <div class="nav-links" flex="70" flex-md="80" layout="row" layout-align="space-between center" style="padding-right: 40px;" ng-hide="isHamburgerMenuOpen">
+                    <div class="nav-links pr40" flex="70" flex-md="80" layout="row" layout-align="space-between center" ng-hide="isHamburgerMenuOpen">
                         <div>
                             <a class="nav-link gray1-fg text-decoration-none pt15 pb15" href="#likewise">Likewise*</a>
                         </div>
@@ -166,10 +165,10 @@
             <!-- ******************************************** -->
             <div class="lawyers-banner" flex layout="row" ng-hide="isHamburgerMenuOpen">
                 <div flex="100" layout="row" layout-align="center start">
-                    <div class="lawyers-banner-title white-fg" flex="25" flex-xs="100" flex-offset="55" flex-offset-xs="0" layout="column" layout-align="center" style="text-align: center;">
+                    <div class="lawyers-banner-title white-fg tac" flex="25" flex-xs="100" flex-offset="55" flex-offset-xs="0" layout="column" layout-align="center">
                         <div>Advice you'll rely on again and again and again.</div>
                         <a href="#cv" class="bounce">
-                            <i class="lawyers-banner-title-caret gold2-fg material-icons posr" style="padding: 20px;">keyboard_arrow_down</i>
+                            <i class="lawyers-banner-title-caret gold2-fg material-icons posr p20">keyboard_arrow_down</i>
                         </a>
                     </div>
                 </div>
@@ -179,7 +178,7 @@
             <!--                CV OVERVIEW                   -->
             <!-- ******************************************** -->
             <div id="cv" class="gold1-fg white-bg" layout="row" layout-align-xs="center">
-                <div class="cv-quote" flex="60" flex-xs="100" flex-gt-sm="40" flex-offset="10" flex-offset-xs="0" layout="row" layout-align-xs="space-around center" style="text-align: center;">
+                <div class="cv-quote" flex="60" flex-xs="100" flex-gt-sm="40" flex-offset="10" flex-offset-xs="0" layout="row" layout-align-xs="space-around center">
                     <div>John advises on all areas of franchise & business law from inception to termination</div>
                 </div>
             </div>
@@ -188,11 +187,11 @@
                     <h3>A LEADING FRANCHISE AND BUSINESS LAWYER</h3>
                     <p>John L. Rogers is internationally recognized in franchise law and also practices corporate/commercial law and general business law. John has been recommended by L’expert many times, he has been named to the International Who’s Who of Franchise Lawyers and designated a “Legal Eagle.” in the U.S. by Franchise Times. John is among the most respected franchise lawyers in Canada with decades of experience helping franchisors, franchisees and their advisors navigate the legal complexities of franchising and corporate/commercial law.</p>
                     <p>John has been admitted to the bar in both British Columbia and Ontario and has experience advising on franchise legislation and drafting of franchise disclosure documents in all franchise-regulated provinces. For four years, John served as general counsel, a director and secretary of the Canadian Franchise Association. In those roles he helped develop policies and programs for the betterment of the franchise industry in Canada and promotion of ethical conduct and camaraderie among industry members.</p>
-                    <p>Download <a href="documents/JohnLRogers_CV.pdf" target="_blank"> John's Curriculum Vitae</a></p>
+                    <p>Download <a href="documents/JohnLRogers_CV.pdf" target="_blank" class="gray3-fg"> John's Curriculum Vitae <i class="material-icons font-size-13">keyboard_arrow_down</i></a></p>
                 </div>
             </div>
             <div class="cv-bumper white-bg" flex layout="row" layout-align="center">
-                <div class="buffer gray1-fg" flex="70" layout="row"></div>
+                <div class="buffer gray1-fg" flex="80" layout="row"></div>
             </div>
 
             <!-- ******************************************** -->
@@ -243,7 +242,7 @@
                         </ul>
                     </div>
                 </div>
-                <div style="width:20px;"></div>
+                <div class="w20"></div>
                 <div flex="40">
                     <div>
                         <h3>Community Commitments</h3>
@@ -315,7 +314,7 @@
                         </ul>
                     </div>
                 </div>
-                <div style="width:20px;"></div>
+                <div class="w20"></div>
                 <div flex="25" layout="column">
                     <div>
                         <h3>Industry Associations</h3>
@@ -344,7 +343,7 @@
                         </ul>
                     </div>
                 </div>
-                <div style="width:20px;"></div>
+                <div class="w20"></div>
                 <div flex="25" layout="row">
                     <div>
                         <h3>Publications</h3>
@@ -366,7 +365,7 @@
                     <div>
                         <div>Franchising & Legal Services</div>
                         <div class="services-banner-scroll-caret" flex="100" layout="row" layout-align="center">
-                            <a href="#services-intro" class="bounce" style="padding: 20px;">
+                            <a href="#services-intro" class="bounce p20">
                                 <i class="gold2-fg material-icons">keyboard_arrow_down</i>
                             </a>
                         </div>
@@ -396,10 +395,10 @@
             <div class="white-bg" flex layout="column" layout-align="center center">
                 <div class="font-weight-bold font-size-25">Have you found the secret sauce?</div>
             </div>
-            <div class="services-franchising-bumper-line white-bg" flex layout="row" layout-align="center center" style="padding: 20px 0 40px 0;">
+            <div class="services-franchising-bumper-line white-bg pt20 pr0 pb40 pl0" flex layout="row" layout-align="center center">
                 <div layout="row" class="gray1-fg"></div>
             </div>
-            <div class="white-bg" flex layout="row" layout-align="center center" style="padding-bottom: 50px;">
+            <div class="white-bg pb50" flex layout="row" layout-align="center center">
                 <div class="services-hamburger-one" flex="20"></div>
                 <div class="services-hamburger-two" flex="20"></div>
                 <div class="services-hamburger-three" flex="20"></div>
@@ -448,14 +447,14 @@
                         </ul>
                     </div>
                 </div>
-                <div layout="column" style="width: 30px;">
+                <div class="w30" layout="column">
                 </div>
                 <div flex="35" flex-xs="100" layout="column" layout-align="center center">
-                    <div style="padding-top: 150px;">
+                    <div class="pt150">
                         <div class="white-bg" flex layout="row" layout-align="center center">
                             <div class="font-weight-bold font-size-25">Expanding to Canada?</div>
                         </div>
-                        <div class="services-franchising-bumper-line white-bg" flex layout="row" layout-align="center center" style="padding: 20px 0 30px 0;">
+                        <div class="services-franchising-bumper-line white-bg pt20 pr0 pb30 pl0" flex layout="row" layout-align="center center">
                             <div layout="row" class="gray1-fg"></div>
                         </div>
                     </div>
@@ -471,7 +470,7 @@
                             <li>General advice on compliance with Canadian laws and customs.</li>
                         </ul>
                     </div>
-                    <div class="services-franchising-bumper services-franchising-bumper-trucks" style="padding-top: 50px;">
+                    <div class="services-franchising-bumper services-franchising-bumper-trucks">
                         <div class="white-bg" flex layout="column" layout-align="center center">
                             <div class="font-weight-bold font-size-25">
                                 <img src="images/truck-icon.png" />
@@ -499,7 +498,7 @@
             <!--             SERVICES: GENERAL LEGAL          -->
             <!-- ******************************************** -->
             <div class="white-bg posr" flex layout="row" layout-align="center">
-                <div class="buffer gray1-fg" flex="70" layout="row"></div>
+                <div class="buffer gray1-fg" flex="80" layout="row"></div>
                 <div class="services-signhere posa"></div>
             </div>
             <div class="services-general white-bg black2-fg" flex layout="column" layout-align="center start">
@@ -537,7 +536,7 @@
                 </div>
             </div>
             <div class="services-general-scroll-caret white-bg" flex="100" layout="row" layout-align="center center">
-                <a href="#testimonials" class="bounce" style="padding: 20px;">
+                <a href="#testimonials" class="bounce p20">
                     <i class="gold2-fg material-icons">keyboard_arrow_down</i>
                 </a>
             </div>
@@ -554,7 +553,7 @@
                 </div>
             </div>
             <div class="testimonials-content white-fg gold2-bg" flex layout="row" layout-align="center start" style="padding-bottom: 80px;">
-                <div style="width: 100%; min-width: 100%;">
+                <div class="w100p mw100p min-100p">
                     <div class="testimonials-content-carousel carousel">
                         <input type="radio" id="carousel-1" name="carousel[]" checked>
                         <input type="radio" id="carousel-2" name="carousel[]">
@@ -566,7 +565,7 @@
                                 <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
                                     <div class="testimonials-content-quote-text posr font-size-30">I will never use another lawyer.</div>
                                     <div class="testimonials-content-quote-icon posr">
-                                        <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 50px; left: -60px;">format_quote</i>
+                                        <i class="testimonials-content-quote-icon-one material-icons flip-xy posa">format_quote</i>
                                     </div>
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
@@ -581,7 +580,7 @@
                                 <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
                                     <div class="testimonials-content-quote-text posr font-size-30">Timely, commercial and pertinent advice.</div>
                                     <div class="testimonials-content-quote-icon posr">
-                                        <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 40px; left: -40px;">format_quote</i>
+                                        <i class="testimonials-content-quote-icon-two material-icons flip-xy posa">format_quote</i>
                                     </div>
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
@@ -596,7 +595,7 @@
                                 <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
                                     <div class="testimonials-content-quote-text posr font-size-30">Tremendous, to the point advice.</div>
                                     <div class="testimonials-content-quote-icon posr">
-                                        <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 50px; left: -60px;">format_quote</i>
+                                        <i class="testimonials-content-quote-icon-three material-icons flip-xy posa">format_quote</i>
                                     </div>
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
@@ -610,7 +609,7 @@
                                 <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
                                     <div class="testimonials-content-quote-text posr font-size-30">Our go-to resource in Canada.</div>
                                     <div class="testimonials-content-quote-icon posr">
-                                        <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 50px; left: -60px;">format_quote</i>
+                                        <i class="testimonials-content-quote-icon-four material-icons flip-xy posa">format_quote</i>
                                     </div>
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
@@ -625,7 +624,7 @@
                                 <div class="testimonials-content-quote" flex="20" flex-sm="50" flex-xs="50" layout="column" layout-align="center center">
                                     <div class="testimonials-content-quote-text posr font-size-30">A man of the utmost integrity.</div>
                                     <div class="testimonials-content-quote-icon posr">
-                                        <i class="material-icons flip-xy posa" style="opacity: 0.3; font-size: 50px; top: 50px; left: -60px;">format_quote</i>
+                                        <i class="testimonials-content-quote-icon-five material-icons flip-xy posa">format_quote</i>
                                     </div>
                                 </div>
                                 <div class="testimonials-content-text" flex="40" flex-sm="100" flex-xs="100" flex-offset="5">
@@ -682,11 +681,11 @@
                             <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
                             <p class="publications-detail">A non-Canadian franchisor planning to expand its franchise system to Canada must make important decisions on the type of legal entity to use for the expansion and the method by which the expansion...</p>
                             <p>
-                                <a href="documents/Structuring%20Expansion%20Canada.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
+                                <a href="documents/Structuring%20Expansion%20Canada.pdf" target="_blank">View PDF <i class="material-icons posr t3 font-size-17">keyboard_arrow_right</i></a>
                             </p>
                         </div>
                     </div>
-                    <div style="width:30px;"></div>
+                    <div class="w30"></div>
                     <div class="publications-card-two" flex="25" flex-sm="100" flex-xs="100" layout="column">
                         <div flex layout-align="start center">
                             <div class="publications-image-two"></div>
@@ -696,11 +695,11 @@
                             <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
                             <p class="publications-detail">Franchising is very active in Canada, where an estimated 1,300 franchise brands and 78,000 franchised units currently operate. Approximately 45 per cent of all retail sales in Canada are made from franchised outlets...</p>
                             <p>
-                                <a href="documents/The%20Franchise%20Law%20Review_%20Chapter%2020%20-%20Canada.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
+                                <a href="documents/The%20Franchise%20Law%20Review_%20Chapter%2020%20-%20Canada.pdf" target="_blank">View PDF <i class="material-icons posr t3 font-size-17">keyboard_arrow_right</i></a>
                             </p>
                         </div>
                     </div>
-                    <div style="width:30px;"></div>
+                    <div class="w30"></div>
                     <div class="publications-card-three" flex="25" flex-sm="100" flex-xs="100" layout="column">
                         <div flex layout-align="start center">
                             <div class="publications-image-three"></div>
@@ -710,7 +709,7 @@
                             <div class="publications-title-buffer white-bg" flex layout="row" layout-align="start center"></div>
                             <p class="publications-detail">Franchise regulation has arrived in British Columbia.  The new BC Franchises Act (the “BC Act” or simply the “Act”) and regulations to it (the “BC Regs” or simply the “Regs”) came into force on Feb...</p>
                             <p>
-                                <a href="documents/Franchises%20Act%20(BC)%20–%20In%20Force%20February%201,%202017.pdf" target="_blank">View PDF <i class="material-icons" style="position: relative; top: 3px; font-size: 17px;">keyboard_arrow_right</i></a>
+                                <a href="documents/Franchises%20Act%20(BC)%20–%20In%20Force%20February%201,%202017.pdf" target="_blank">View PDF <i class="material-icons posr t3 font-size-17">keyboard_arrow_right</i></a>
                             </p>
                         </div>
                     </div>
@@ -738,46 +737,43 @@
                 <div flex="70" flex-offset="15">
                     <p>We appreciate that many clients dislike hourly rates because they want to know, up front, what their legal fees are going to be. That’s why Likewise offers the option of Up Front Fees.</p>
                     <p>Once any major documents required of us have been determined, we will provide an up front fee quote in a client engagement letter, with a retainer required. The up front price will apply to all work specified in the engagement letter. Only if additional work is required will an hourly rate apply.  Disbursements and taxes will be extra. The engagement letter will cover all of these points.</p>
-                    <p id="contact" style="font-weight: 700;">Need a fixed price? Drop us a line:</p>
+                    <p id="contact" class="fw700">Need a fixed price? Drop us a line:</p>
                 </div>
                 <div flex="15" layout="row"></div>
             </div>
-            <div class="contact-form white-bg" flex layout="row" layout-align="center center" style="padding-top: 30px; padding-bottom: 150px;">
+            <div class="contact-form white-bg pt30 pb150" flex layout="row" layout-align="center center">
                 <form name="userForm" action="https://formspree.io/alachkovics@gmail.com" method="post" flex="70">
                     <div layout="column">
-                        <div flex="grow" layout="row" style="margin-bottom: 15px;" class="contact-input-container" ng-class="{ 'validation-error': !validName }">
+                        <div flex="grow" layout="row" class="contact-input-container mb15" ng-class="{ 'validation-error': !validName }">
                             <input flex
                                    id="name"
-                                   class="gray1-bg"
+                                   class="gray1-bg font-size-18 pt20 pb20 pr40 pl40 b0"
                                    name="user_name"
                                    type="text"
                                    ng-model="user_name"
-                                   placeholder="Name*"
-                                   style="font-size: 18px; padding: 20px 40px; border: none;">
+                                   placeholder="Name*">
                         </div>
-                        <div flex="grow" layout="row" style="margin-bottom: 15px;" class="contact-input-container" ng-class="{ 'validation-error': !validMail }">
+                        <div flex="grow" layout="row" class="contact-input-container mb15" ng-class="{ 'validation-error': !validMail }">
                             <input flex
                                    id="mail"
                                    name="user_mail"
-                                   class="gray2-bg"
+                                   class="gray2-bg font-size-18 pt20 pb20 pr40 pl40 b0"
                                    type="email"
                                    ng-model="user_mail"
-                                   placeholder="Email*"
-                                   style="font-size: 18px; padding: 20px 40px; border: none;">
+                                   placeholder="Email*">
                         </div>
                         <div flex="grow" layout="row">
                             <input flex
                                    id="msg"
                                    name="user_message"
-                                   class="gray3-bg"
+                                   class="gray3-bg font-size-18 pt20 pb20 pr40 pl40 b0"
                                    type="text"
                                    ng-model="user_message"
-                                   placeholder="Describe your needs ..."
-                                   style="font-size: 18px; padding: 20px 40px; border: none;">
+                                   placeholder="Describe your needs ...">
                         </div>
-                        <div flex layout="row" layout-align="center" style="margin-top: 50px;">
+                        <div class="mt50" flex layout="row" layout-align="center">
                             <button  type="submit" class="contact-submit-btn gold2-bg white-fg border1-white shake-icon" ng-click="validate($event)">
-                                Send Request <i class="material-icons posr" style="top: 4px; font-size: 20px;">keyboard_arrow_right</i>
+                                Send Request <i class="material-icons posr t4 font-size-20">keyboard_arrow_right</i>
                             </button>
                         </div>
                     </div>
@@ -799,7 +795,7 @@
             <!-- ******************************************** -->
             <!--                 FOOTER                       -->
             <!-- ******************************************** -->
-            <div class="footer white-fg black-bg" flex layout="row" layout-sm="column" layout-xs="column" layout-align="center center" style="padding: 100px 0;">
+            <div class="footer white-fg black-bg font-size-15 lh09 pt100 pb100 pr0 pl0" flex layout="row" layout-sm="column" layout-xs="column" layout-align="center center">
                 <div class="footer-column footer-column-one"
                      flex="30"
                      flex-sm="100"
@@ -849,18 +845,18 @@
 
             <div class="footer-logo-container white-fg black-bg" flex layout="row">
                 <div flex="100" layout="column" layout-align="start center">
-                    <div style="padding-bottom: 20px;">
+                    <div class="pb20">
                         <img src="images/owls-logo.png"/>
                     </div>
                     <div class="footer-logo"></div>
                     <div>
-                        <h4 class="banner-slogan gold2-fg font-size-15" style="margin-top: 15px;">Franchise & Business Law</h4>
+                        <h4 class="banner-slogan gold2-fg font-size-15 mt15">Franchise & Business Law</h4>
                     </div>
                 </div>
             </div>
             <div class="gray2-fg black-bg" flex layout="row">
                 <div flex="100" layout="row" layout-align="end center">
-                    <div class="font-size-10" style="padding: 0 25px 10px 0;">*Denotes Law Corporation</div>
+                    <div class="font-size-10 pt0 pr25 pb10 pl0">*Denotes Law Corporation</div>
                 </div>
             </div>
         </div>
