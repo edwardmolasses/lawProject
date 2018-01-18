@@ -89,4 +89,8 @@
     .publications-card-one-detail {
         width: 250px;
     }
+
+    .publications-card-link {
+        padding-top: 0;
+    }
 }
