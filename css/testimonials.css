@@ -12,29 +12,29 @@
 }
 
 .testimonials-content-quote-icon-two {
-    top: 40px;
+    top: 30px;
     left: -40px;
     opacity: 0.3;
     font-size: 50px !important;
 }
 
 .testimonials-content-quote-icon-three {
-    top: 50px;
+    top: 20px;
     left: -60px;
     opacity: 0.3;
     font-size: 50px !important;
 }
 
 .testimonials-content-quote-icon-four {
-    top: 50px;
-    left: -60px;
+    top: 20px;
+    left: -40px;
     opacity: 0.3;
     font-size: 50px !important;
 }
 
 .testimonials-content-quote-icon-five {
-    top: 50px;
-    left: -60px;
+    top: 20px;
+    left: -40px;
     opacity: 0.3;
     font-size: 50px !important;
 }
@@ -43,10 +43,6 @@
     .testimonials-content-quote {
         margin-top: 0;
     }
-}
-
-@media screen and (max-width: 1100px) {
-
 }
 
 @media screen and (max-width: 960px) {

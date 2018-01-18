@@ -48,6 +48,12 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .publications-card-link {
+        padding-top: 50px;
+    }
+}
+
 @media screen and (max-width: 960px) {
     .publications {
         padding: 70px 0;
