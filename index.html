@@ -907,6 +907,10 @@
                     title: 'Snazzy!',
                     icon: markerImage
                 });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                    window.open('https://www.google.ca/maps/place/1125+Howe+St,+Vancouver,+BC+V6Z+2K8/@49.2788715,-123.1283545,17z/data=!3m1!4b1!4m5!3m4!1s0x548673d4f918da71:0x5cca229fc5d0c616!8m2!3d49.2788715!4d-123.1261658', '_blank');
+                });
             }
 
             // ********************************************
