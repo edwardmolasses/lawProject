@@ -89,4 +89,8 @@
         display: block;
         background: url('../images/hamburger-menu.jpg') no-repeat center;
     }
+
+    .fix-to-top > .nav-logo {
+        top: 5px;
+    }
 }
