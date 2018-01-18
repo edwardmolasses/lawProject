@@ -155,6 +155,7 @@ body {
     cursor: default;
     pointer-events: none;
 }
+
 .carousel__items {
     margin: 0;
     padding: 0;
@@ -163,6 +164,7 @@ body {
     height: 600px;
     position: relative;
 }
+
 .carousel__item {
     position: absolute;
     top: 0;
@@ -173,10 +175,12 @@ body {
     transition: opacity 2s;
     -webkit-transition: opacity 2s;
 }
+
 .carousel__item img {
     width: 100%;
     vertical-align: middle;
 }
+
 .carousel__prev > label, .carousel__next > label {
     border-radius: 50%;
     cursor: pointer;
@@ -192,42 +196,28 @@ body {
     opacity: 0;
     z-index: 2;
 }
+
 .carousel__prev > label:hover, .carousel__prev > label:focus, .carousel__next > label:hover, .carousel__next > label:focus {
     opacity: .5 !important;
 }
+
 .carousel__prev > label:before, .carousel__prev > label:after, .carousel__next > label:before, .carousel__next > label:after {
     content: "";
     position: absolute;
     width: inherit;
     height: inherit;
 }
-.carousel__prev > label:before, .carousel__next > label:before {
-    content: ">";
-    width: 60%;
-    height: 60%;
-    top: 20%;
-}
+
 .carousel__prev > label {
     margin-top: -50px;
     left: 2%;
 }
-.carousel__prev > label:before {
-    font-weight: 700;
-    left: 35%;
-    top: 20%;
-    transform: rotate(179deg) scale(0.7, 1.4);
-    -webkit-transform: rotate(179deg) scale(0.7, 1.4);
-}
+
 .carousel__next > label {
     margin-top: -50px;
     right: 2%;
 }
-.carousel__next > label:before {
-    font-weight: 700;
-    left: 10%;
-    transform: rotate(358deg) scale(0.7, 1.4);
-    -webkit-transform: rotate(358deg) scale(0.7, 1.4);
-}
+
 .carousel__nav {
     position: absolute;
     bottom: 3%;
@@ -236,6 +226,7 @@ body {
     width: 100%;
     z-index: 3;
 }
+
 .carousel__nav > label {
     background-color: #81542e;
     display: inline-block;

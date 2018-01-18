@@ -548,7 +548,6 @@
                 <div flex="100" layout="row" layout-align="center center">
                     <div>
                         <div class="font-size-40">Testimonials</div>
-                        <!--<i class="material-icons flip-xy" style="opacity: 0.3; font-size: 50px;">format_quote</i>-->
                     </div>
                 </div>
             </div>
@@ -638,18 +637,38 @@
                             </li>
                         </ul>
                         <div id="carousel__prev" class="carousel__prev">
-                            <label id="carousel-1" for="carousel-1" onclick="setCounter(1)"></label>
-                            <label id="carousel-2" for="carousel-2" onclick="setCounter(2)"></label>
-                            <label id="carousel-3" for="carousel-3" onclick="setCounter(3)"></label>
-                            <label id="carousel-4" for="carousel-4" onclick="setCounter(4)"></label>
-                            <label id="carousel-5" for="carousel-5" onclick="setCounter(5)"></label>
+                            <label id="carousel-1" for="carousel-1" onclick="setCounter(1)">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </label>
+                            <label id="carousel-2" for="carousel-2" onclick="setCounter(2)">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </label>
+                            <label id="carousel-3" for="carousel-3" onclick="setCounter(3)">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </label>
+                            <label id="carousel-4" for="carousel-4" onclick="setCounter(4)">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </label>
+                            <label id="carousel-5" for="carousel-5" onclick="setCounter(5)">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </label>
                         </div>
                         <div id="carousel__next" class="carousel__next">
-                            <label for="carousel-1" onclick="setCounter(1)"></label>
-                            <label for="carousel-2" onclick="setCounter(2)"></label>
-                            <label for="carousel-3" onclick="setCounter(3)"></label>
-                            <label for="carousel-4" onclick="setCounter(4)"></label>
-                            <label for="carousel-5" onclick="setCounter(5)"></label>
+                            <label for="carousel-1" onclick="setCounter(1)">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </label>
+                            <label for="carousel-2" onclick="setCounter(2)">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </label>
+                            <label for="carousel-3" onclick="setCounter(3)">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </label>
+                            <label for="carousel-4" onclick="setCounter(4)">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </label>
+                            <label for="carousel-5" onclick="setCounter(5)">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </label>
                         </div>
                         <div class="carousel__nav">
                             <label for="carousel-1" onclick="setCounter(1)"></label>
@@ -867,10 +886,7 @@
 
             google.maps.event.addDomListener(window, 'load', init);
             function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
                 var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
                     zoom: 15,
                     scrollwheel: false,
                     fullscreenControl: false,
@@ -878,24 +894,13 @@
                     zoomControl: false,
                     scaleControl: false,
                     streetViewControl: false,
-                    // The latitude and longitude to center the map (always required)
-                    // center: new google.maps.LatLng(40.6700, -73.9400), // New York
                     center: new google.maps.LatLng(49.2788715, -123.1283545), // New York
-                    // How you would like to style the map.
-                    // This is where you would paste any style found on Snazzy Maps.
                     styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"poi.attraction","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"hue":"#b8ff00"}]},{"featureType":"poi.attraction","elementType":"labels.icon","stylers":[{"visibility":"off"},{"color":"#bd1313"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"hue":"#0029ff"},{"visibility":"off"}]}]
                 };
 
-                // Get the HTML DOM element that will contain your map
-                // We are using a div with id="map" seen below in the <body>
                 var mapElement = document.getElementById('map');
-
-                // Create the Google Map using our element and options defined above
                 var map = new google.maps.Map(mapElement, mapOptions);
                 var markerImage = 'images/map-marker.png';
-
-                // Let's also add a marker while we're at it
-                // position: new google.maps.LatLng(49.2788715, -123.1283545),
                 var marker = new google.maps.Marker({
                     position: {lat: 49.2788715, lng: -123.1283545},
                     map: map,
@@ -915,15 +920,15 @@
             var getScrollXY = function() {
                 var scrOfX = 0, scrOfY = 0;
                 if( typeof( window.pageYOffset ) == 'number' ) {
-                    //Netscape compliant
+                    // netscape compliant
                     scrOfY = window.pageYOffset;
                     scrOfX = window.pageXOffset;
                 } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
-                    //DOM compliant
+                    // dom compliant
                     scrOfY = document.body.scrollTop;
                     scrOfX = document.body.scrollLeft;
                 } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
-                    //IE6 standards compliant mode
+                    // ie6 standards compliant mode
                     scrOfY = document.documentElement.scrollTop;
                     scrOfX = document.documentElement.scrollLeft;
                 }
@@ -932,13 +937,13 @@
 
             var scrollToY = function(posY) {
                 if( typeof( window.pageYOffset ) == 'number' ) {
-                    //Netscape compliant
+                    // netscape compliant
                     window.scrollTo(0, posY);
                 } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
-                    //DOM compliant
+                    // dom compliant
                     document.body.scrollTo(0, posY);
                 } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
-                    //IE6 standards compliant mode
+                    // ie6 standards compliant mode
                     document.documentElement.scrollTo(0, posY);
                 }
                 return true;
