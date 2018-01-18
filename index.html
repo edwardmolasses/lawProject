@@ -966,12 +966,16 @@
 
                     if (navOffset < windowScrollY) {
                         document.getElementById('nav-content').classList.add("fix-to-top");
-                        document.getElementById('nav-content-hamburger').classList.add("fix-to-top");
+                        if (!!document.getElementById('nav-content-hamburger')) {
+                            document.getElementById('nav-content-hamburger').classList.add("fix-to-top");
+                        }
                     }
 
                     if (navOffset > windowScrollY) {
                         document.getElementById('nav-content').classList.remove("fix-to-top");
-                        document.getElementById('nav-content-hamburger').classList.remove("fix-to-top");
+                        if (!!document.getElementById('nav-content-hamburger')) {
+                            document.getElementById('nav-content-hamburger').classList.remove("fix-to-top");
+                        }
                     }
                 };
             })();
